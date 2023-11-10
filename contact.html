@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Doug Hill - Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Young+Serif&display=swap">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/style.production.css">
+
+    </head>
+
+    <body>
+
+        <header class="page-header">
+
+            <!--LOGO UPPER LEFT-->
+            <img src="img/logo.svg" class="logo_image page-header__item" alt="Doug Hill Web Developer logo">
+    
+            <!--h1 header text placement for accessibility-->
+            <div class="page-header__item">
+                <h1>Doug Hill<br>Web Developer</h1>
+            </div>
+
+            <!--MENU BAR-->
+            <nav class="page-header__item">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="index.html" class="navigation-list__item" role="menuitem">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="about.html" class="navigation-list__item" role="menuitem" aria-label="Information about me">About</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="work.html" class="navigation-list__item" role="menuitem">Work</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" class="navigation-list__item" role="menuitem">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+
+            <!--CENTER TEXT-->
+            <div class="contact">
+                <h1>Contact</h1>
+            </div>
+            <div class="contact">
+                Doug Hill<br>
+                6301 Romford Road<br>
+                Madison, WI 53711<br>
+                USA<br>
+                <br>
+                Phone: <a href="tel:+1 608 444 5575" aria-label="Phone Number">1+ 608 444 5575</a><br>
+                Email: <a href="mailto:stix2you@gmail.com">stix2you@gmail.com</a><br>
+                Skype: <a href="skype:hello.stix2you">hello.stix2you</a><br>
+                <br>
+                <a href="mailto:stix2you@gmail.com">Contact me</a><br><br>
+            </div> 
+
+            <!--CONTACT FORM-->
+            <!--Note: HTML5 frontend validation attributes used here: placeholder, required, maxlength-->
+            <form action="" class="contact" method="post">
+                <label class="standard-label" for="contact-email">Email: </label>
+                <input type="email" placeholder="Your Email" id="contact-email" required>
+            
+                <label class="standard-label" for="contact-phone">Telephone: </label>
+                <input type="tel" placeholder="Your Phone Number" id="contact-phone" required pattern="\d{3}[\-]\d{3}[\-]\d{4}"> <!--REQUIRES USA phone format-->
+                
+                <br><br>
+                <label class="standard-label" for="contact-message">Message: </label>
+                <textarea placeholder="Your Message" id="contact-message" maxlength="240" required cols="40" rows="3"></textarea>        
+                <input type="submit" value="Send message">
+            </form>
+
+        </main>
+
+        <footer class="page_footer">
+            
+            <p>Find me on</p>
+
+            <div class="social-media">    
+                <img src="img/github_icon.svg" class="social-media__img" alt="github logo">
+                <img src="img/twitter_icon.svg" class="social-media__img" alt="twitter logo">
+                <img src="img/linkedin_icon.svg" class="social-media__img" alt="linkedin logo">
+                <button type="button" class="social-media__button">GitHub</button>
+                <button type="button" class="social-media__button">Twitter</button>
+                <button type="button" class="social-media__button">LinkedIn</button>
+            </div>
+
+        </footer>
+
+        <!--tota11y accessibility checker
+        <script src="js/tota11y.min.js"></script> -->
+
+    </body>
+
+</html>
