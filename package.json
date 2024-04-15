@@ -5,8 +5,8 @@
    "main": "index.js",
    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
-      "start bs": "browser-sync start --server --files \"*.html, css/*.css\"",
-      "start http": "nodemon --watch . -e html,css,js --exec \"http-server\""
+      "start-bs": "browser-sync start --server --files \"*.html, css/*.css\"",
+      "start-http": "nodemon --watch . -e html,css,js --exec \"http-server\""
    },
    "keywords": [],
    "author": "",

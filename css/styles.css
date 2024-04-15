@@ -1,12 +1,13 @@
 
 :root {
-  --first-background-color: #000;
+  --first-background-color: #140909;
   --second-background-color: rgb(63, 19, 59);
-  --heading-text-color: rgb(199, 0, 0);
-  --body-text-color: #6ba9ff;
+  --heading-text-color: rgb(255, 83, 83);
+  --body-text-color: #7d90fa;
   --button-background: #1d778d;
   --button-text: white;
   --button-border-color: #6ed3f0;
+  --first-border-color: #6ed3f0;
   --nav-text-unvisited: #6ba9ff;
   --nav-text-visited: #6ba9ff;
   --nav-text-hover: rgb(192, 2, 192);
@@ -117,20 +118,20 @@ h3 {
   color: var(--body-text-color);
 }
 
-ul {
+/* ul {
   display: flex;
   list-style: none;
   justify-content: flex-start;
-}
+} */
 
 p {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-normal);
 }
 
-li {
+/* li {
   margin: 20px;
-}
+} */
 
 a {
   color: var(--body-text-color);
@@ -216,13 +217,13 @@ td {
 
 .social-media {
   display: grid;
-  grid-template-columns: 100px 100px 100px;
+  grid-template-columns: 100px 100px;
   grid-gap: 20px;
   justify-content: center;
 }
 
 .social-media__img {
-  margin-left: 25px;
+  margin-left: 0px;
 }
 
 @media all and (max-width: 500px) {
@@ -355,4 +356,42 @@ button:focus,
 
 .skyline {
   animation: 10s color-change infinite normal linear;
+}
+
+/* Styling the ordered list container */
+.tech-stack {
+   padding-left: 0;
+   list-style-type: none;
+}
+
+/* Styling each list item in the ordered list */
+.tech-stack > li {
+   margin: 20px 200px 60px 200px;
+   background-color: var(--first-background-color);
+   border: 1px solid var(--first-border-color);
+   padding: 15px 20px;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   font-size: var(--font-size-large);
+   color: var(--heading-text-color);
+}
+
+/* Styling nested unordered lists */
+.tech-stack ul {
+   padding-left: 20px;
+   list-style-type: none;
+   font-size: var(--font-size-medium);
+   color: var(--body-text-color)
+}
+
+/* Styling list items in nested lists */
+.tech-stack ul li {
+   margin-bottom: 5px;
+}
+
+/* Styling bullets for nested list items with a custom character */
+.tech-stack ul li:before {
+   content: "— "; /* En dash for a bullet point look */
+   color: #555; /* Dark gray color for bullets */
+   padding-right: 5px;
 }
