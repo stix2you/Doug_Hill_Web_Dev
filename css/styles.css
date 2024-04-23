@@ -118,20 +118,10 @@ h3 {
   color: var(--body-text-color);
 }
 
-/* ul {
-  display: flex;
-  list-style: none;
-  justify-content: flex-start;
-} */
-
 p {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-normal);
 }
-
-/* li {
-  margin: 20px;
-} */
 
 a {
   color: var(--body-text-color);
@@ -194,11 +184,13 @@ td {
   border-radius: 50%;  /* rounds edges of image, 50% makes it circular */
 }
 
-.logo_image {
-  width: 20%;
-  max-width: 150px;
-  float: left;
-  background-color: var(--first-background-color);
+/* load the logo image in the css file so we have control over styling it */
+.logo-background {
+   background-image: url('../../img/logo.svg'); 
+   background-size: contain;
+   background-repeat: no-repeat; 
+   width: 100%; 
+   height: 200px;
 }
 
 .project-list {
