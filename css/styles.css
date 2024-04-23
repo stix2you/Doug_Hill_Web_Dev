@@ -119,20 +119,10 @@ h3 {
   color: var(--body-text-color);
 }
 
-/* ul {
-  display: flex;
-  list-style: none;
-  justify-content: flex-start;
-} */
-
 p {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-normal);
 }
-
-/* li {
-  margin: 20px;
-} */
 
 a {
   color: var(--body-text-color);
