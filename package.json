@@ -6,7 +6,10 @@
    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "start": "browser-sync start --server --files \"*.html, css/*.css\"",
+<<<<<<< HEAD
       "start-bs": "browser-sync start --server --files \"*.html, css/*.css\"",
+=======
+>>>>>>> bb87ded74964be6f6aa654bcbb7c4e9171fc0082
       "start-http": "nodemon --watch . -e html,css,js --exec \"http-server\""
    },
    "keywords": [],
