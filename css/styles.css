@@ -25,6 +25,7 @@
   --font-size-small: 10px;
   --font-weight-bold: 700;
   --font-weight-normal: 200;
+  --font-weight-light: 100;
 }
 
 /* sets all elements to border-box value,
@@ -115,24 +116,14 @@ h2 {
 
 h3 {
   font-size: var(--font-size-large);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-light);
   color: var(--body-text-color);
 }
 
-/* ul {
-  display: flex;
-  list-style: none;
-  justify-content: flex-start;
-} */
-
 p {
   font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-light);
 }
-
-/* li {
-  margin: 20px;
-} */
 
 a {
   color: var(--body-text-color);
@@ -303,6 +294,7 @@ button:focus,
    border-radius: 8px;
    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
    font-size: var(--font-size-large);
+   font-weight: var(--font-weight-light);
    color: var(--heading-text-color);
 }
 
@@ -340,7 +332,11 @@ button:focus,
    border-radius: 8px;
    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
    font-size: var(--font-size-large);
+   font-weight: var(--font-weight-light);
    color: var(--heading-text-color);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
  }
  
  /* .project-list__item:last-child {
@@ -366,6 +362,7 @@ button:focus,
    border: 1px solid var(--first-border-color); 
    transition: 0.3s; 
    font-size: var(--font-size-medium-large);
+   font-weight: var(--font-weight-normal);
 }
 
 .project-link:hover {
@@ -374,9 +371,10 @@ button:focus,
 }
 
 .project-image {
-   display: block;
+   display: inline-block;
    max-width: 100%; 
    height: auto; 
+   max-height: 350px;
    margin: 10px 0; 
    border-radius: 8px;
    border: 1px solid var(--first-border-color); 
