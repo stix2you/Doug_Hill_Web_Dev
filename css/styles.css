@@ -29,7 +29,7 @@ STYLING SECTIONS:
    --font-weight-light: 100;
 
    /* Color Palette: */
-   --color-palette-1A: #F9E8C9;
+   --color-palette-1A: #f3e9d7;
    --color-palette-1B: #98ABEE;
    --color-palette-1C: #1d24cA;
    --color-palette-1D: #201658;
@@ -76,7 +76,8 @@ a:focus {
 }
 
 a:active {
-   color: var(--color-palette-1C);
+   color: var(--color-palette-1B);
+   text-decoration: underline;
 }
 /* DEFAULT LINK STYLING */
 
@@ -93,7 +94,6 @@ a:active {
    width: 100%;
    padding: 20px;
    background-color: var(--color-palette-1A); /* Sets the background to same as body */
-   
 }
 
 .special {
@@ -105,7 +105,6 @@ a:active {
    width: 20%;
    max-width: 200px;
    float: left;
-
 }
 
 .navigation-list {
@@ -120,7 +119,7 @@ a:active {
    padding: 0 15px;
    color: black; /* Sets the text color to black */
    font-family: var(--font-family-2); 
-   font-size: var(--font-size-large); 
+   font-size: var(--font-size-medium); 
    font-style: normal; 
    text-decoration: none; /* Removes any underline from links */
 }
@@ -130,8 +129,7 @@ a:active {
 }
 
 .page-header nav {
-   border-top: 8px solid black;
-   border-right: 8px solid black;
+   
    position: relative;
 }
 /* PAGE HEADER STYLING */
@@ -215,6 +213,7 @@ body {
    margin: auto;   /* This centers the container horizontally */
    text-align: center;   /* Aligns text to center in child elements */
    padding: 20px;   /* Adds spacing inside the container */
+   
 }
 
 .first-row {
