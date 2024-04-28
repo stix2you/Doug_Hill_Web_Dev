@@ -88,16 +88,16 @@ a:active {
 /* PAGE HEADER STYLING */
 .page-header {
    display: flex;
-   align-items: center;
-   justify-content: space-between;
+   align-items: top;
+   justify-content: center;
    width: 100%;
    padding: 20px;
-   text-align: left;
    background-color: var(--color-palette-1A); /* Sets the background to same as body */
+   
 }
 
-.page-header__item {
-   flex: 0 1 auto;
+.special {
+   width: 100%;
 }
 
 .logo_image {
@@ -105,11 +105,12 @@ a:active {
    width: 20%;
    max-width: 200px;
    float: left;
-   border-radius: 50%;
+
 }
 
 .navigation-list {
    display: flex;
+   justify-content: flex-end;
    margin: 0;
    padding: 0;
    list-style: none;
@@ -126,6 +127,12 @@ a:active {
 
 .page-header__item:last-child {
    flex-grow: 0;
+}
+
+.page-header nav {
+   border-top: 8px solid black;
+   border-right: 8px solid black;
+   position: relative;
 }
 /* PAGE HEADER STYLING */
 
@@ -425,7 +432,22 @@ body {
 
 /* RESPONSIVE STYLING */
 /* Styles for narrow screens: max-width 500px */
-@media (max-width: 800px) {
+@media (max-width:450px) {
+   .navigation-list {
+      flex-direction: column;
+   }
+
+   .logo_image {
+     width: 100px;
+     background-color: black;
+   
+   }
+   
+   .page-header {
+      padding: 10px;
+      
+   }
+
    .project-list {
       grid-template-columns: 1fr;
       /* 1 column layout */
@@ -487,19 +509,19 @@ body {
 @media (max-width: 900px) {
    .navigation-list {
       display: flex;
-      flex-direction: column;
-      /* Stacks navigation items vertically */
+     
+      align-items: flex-end;
       margin-left: 0;
-      /* Centers or removes left margin if previously set */
    }
 
    .navigation-list__item {
       margin: 10px 0;
-      /* Standard vertical spacing, no horizontal margin */
       font-size: 18px;
-      /* Readable font size */
       line-height: 1.5;
-      /* Spacing between lines */
    }
 }
+
+
+
+
 /* RESPONSIVE STYLING */
