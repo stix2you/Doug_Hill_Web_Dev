@@ -62,6 +62,7 @@ STYLING SECTIONS:
 /* DEFAULT LINK STYLING */
 a {
    color: var(--color-palette-1D);
+   text-decoration: none;
 }
 
 a:visited {
@@ -142,6 +143,7 @@ a:active {
    clear: both;
    display: flex;
    flex-direction: column;
+   text-decoration: none;
 }
 
 .social-media {
@@ -149,6 +151,7 @@ a:active {
    grid-template-columns: 100px 100px;
    grid-gap: 20px;
    justify-content: center;
+   text-decoration: none;
 }
 
 .social-media__img {
@@ -158,22 +161,15 @@ a:active {
 .button,
 button {
    /* overwrites browser defaults and resets the border */
-   border: none;
    display: flex;
    justify-content: center;
-
-   /* takes the font from the outer container */
    font-family: inherit;
    font-size: var(--font-size-medium);
-
-   /* styles the button */
    background-color: var(--button-background);
    color: var(--button-text);
    text-decoration: none;
    padding: 10px;
    border-radius: 3px;
-
-   /* width of the border, type, color */
    border-bottom: 2px solid var(--button-border-color);
    transition-duration: 0.2s;
    transition-property: opacity;
