@@ -36,15 +36,7 @@ STYLING SECTIONS:
    --color-palette-1B: #98ABEE;
    --color-palette-1C: #1d24cA;
    --color-palette-1D: #201658;
-   --color-palette-1E: #1d778d;
-
-   /* --color-palette-1A: #f3e9d7;
-   --color-palette-1B: #98ABEE;
-   --color-palette-1C: #1d24cA;
-   --color-palette-1D: #201658;
-   --color-palette-1E: #1d778d; */
-
-
+   --first-border-color: #ccc;
 
    /* Button Colors: */
    --button-background: #7edaff;
@@ -69,6 +61,7 @@ h1 {
    font-size: var(--font-size-very-large);
 
 }
+
 /* ROOT STYLING */
 
 
@@ -122,6 +115,7 @@ button:focus,
    opacity: 0.8;
    border-color: var(--button-hover-border-color);
 }
+
 /* DEFAULT LINK/NAV STYLING */
 
 
@@ -138,7 +132,8 @@ button:focus,
    padding: 20px 50px;
    background-color: var(--color-palette-1A);
    position: fixed;
-   z-index: 1000; /* High z-index to ensure it's on top */
+   z-index: 1000;
+   /* High z-index to ensure it's on top */
 }
 
 .special {
@@ -169,14 +164,21 @@ button:focus,
    font-style: normal;
 }
 
+.navigation-list__item--active {
+   color: var(--color-palette-1B);
+   text-decoration: underline;
+}
+
 .page-header__item:last-child {
    flex-grow: 0;
 }
 
 .page-header nav {
-
    position: relative;
 }
+
+
+
 /* PAGE HEADER STYLING */
 
 
@@ -189,32 +191,47 @@ button:focus,
 
 /* PAGE FOOTER STYLING */
 .page_footer {
-   text-align: center; /* Centers the text horizontally */
-   display: flex; /* Uses flexbox to organize children */
-   flex-direction: column; /* Stacks children vertically */
-   align-items: center; /* Aligns children (such as h5 and .social-media) to the center horizontally */
-   margin-bottom: 20px; /* Adds some space below the footer */
+   text-align: center;
+   /* Centers the text horizontally */
+   display: flex;
+   /* Uses flexbox to organize children */
+   flex-direction: column;
+   /* Stacks children vertically */
+   align-items: center;
+   /* Aligns children (such as h5 and .social-media) to the center horizontally */
+   margin-bottom: 20px;
+   /* Adds some space below the footer */
 }
 
 /* Styling for the section containing the social media links */
 .social-media {
-   display: flex; /* Changes layout to flex to bring icons closer */
-   align-items: center; /* Vertically centers the icons in the container */
-   justify-content: center; /* Horizontally centers the icons in their container */
-   gap: 10px; /* Sets a gap between the icons */
+   display: flex;
+   /* Changes layout to flex to bring icons closer */
+   align-items: center;
+   /* Vertically centers the icons in the container */
+   justify-content: center;
+   /* Horizontally centers the icons in their container */
+   gap: 10px;
+   /* Sets a gap between the icons */
 }
 
 /* Styling for the social media images */
 .social-media__img {
-   width: 40px; /* Sets a fixed width for the icons */
-   height: auto; /* Maintains aspect ratio of icons */
-   cursor: pointer; /* Changes the cursor to a pointer to indicate these are clickable */
+   width: 40px;
+   /* Sets a fixed width for the icons */
+   height: auto;
+   /* Maintains aspect ratio of icons */
+   cursor: pointer;
+   /* Changes the cursor to a pointer to indicate these are clickable */
 }
 
 .footer_text {
-   font-size: var(--font-size-medium); /* Sets the font size for the footer text */
-   margin-bottom: 10px; /* Adds some space below the heading */
+   font-size: var(--font-size-medium);
+   /* Sets the font size for the footer text */
+   margin-bottom: 10px;
+   /* Adds some space below the heading */
 }
+
 /* PAGE FOOTER STYLING */
 
 
@@ -302,6 +319,7 @@ body {
    max-width: 600px;
    height: auto;
 }
+
 .madison-picture {
    display: flex;
    justify-content: center;
@@ -354,7 +372,8 @@ body {
    text-align: center;
    max-width: 700px;
    margin: 0 auto;
-   padding-top: 120px; /* Ensure content starts below the navbar !!! */
+   padding-top: 120px;
+   /* Ensure content starts below the navbar !!! */
 }
 
 /* Styling the ordered list grid container */
@@ -373,8 +392,8 @@ body {
    border: 1px solid var(--first-border-color);
    padding: 15px 20px;
    border-radius: 8px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-   font-size: var(--font-size-medium); 
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+   font-size: var(--font-size-medium);
    font-weight: var(--font-weight-light);
    color: var(--color-palette-1C);
 }
@@ -383,7 +402,7 @@ body {
 .tech-stack ul {
    padding-left: 20px;
    list-style-type: none;
-   font-size: 0.8em; 
+   font-size: 0.8em;
    color: var(--color-palette-1D);
 }
 
@@ -394,10 +413,13 @@ body {
 
 /* Styling bullets for nested list items with a custom character */
 .tech-stack ul li:before {
-   content: "— "; /* En dash for a bullet point look */
-   color: #555; /* Dark gray color for bullets */
+   content: "— ";
+   /* En dash for a bullet point look */
+   color: #555;
+   /* Dark gray color for bullets */
    padding-right: 5px;
 }
+
 /* ABOUT PAGE STYLING */
 
 
@@ -408,49 +430,80 @@ body {
    text-align: center;
    max-width: 1200px;
    margin: 0 auto;
-   padding-top: 120px; /* Ensure content starts below the navbar */
+   padding-top: 120px;
+   /* Ensure content starts below the navbar */
 }
 
 .project-list {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adapts number of columns based on the screen width */
-   grid-gap: 20px; /* Space between cards */
-   padding: 20px; /* Padding around the entire grid */
-   margin: 0 auto; /* Centers the grid in the section */
-   max-width: 1200px; /* Maximum width of the grid */
+   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+   /* Adapts number of columns based on the screen width */
+   grid-gap: 20px;
+   /* Space between cards */
+   padding: 20px;
+   /* Padding around the entire grid */
+   margin: 0 auto;
+   /* Centers the grid in the section */
+   max-width: 1200px;
+   /* Maximum width of the grid */
 }
 
 .project-list__item {
-   background-color: var(--color-palette-1A); /* Background color for each card */
-   border: 1px solid var(--first-border-color); /* Border styling */
-   padding: 15px; /* Padding inside each card */
-   border-radius: 8px; /* Rounded corners for the cards */
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-   transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+   display: flex;
+   /* Use flexbox to layout the child elements */
+   flex-direction: column;
+   /* Stack children vertically */
+   justify-content: space-between;
+   /* Align children to space between */
+   background-color: var(--color-palette-1A);
+   border: 1px solid var(--first-border-color);
+   padding: 15px;
+   border-radius: 8px;
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+   transition: transform 0.3s ease-in-out;
 }
 
 .project-list__item:hover {
-   transform: translateY(-5px); /* Slight raise effect on hover */
+   transform: scale(1.02);
+   /* Slight raise effect on hover */
 }
 
 .project-image {
-   width: 100%; /* Ensures the image fills the card width */
-   height: auto; /* Keeps image aspect ratio intact */
-   border-radius: 5px; /* Optional: rounds the corners of the image */
-   margin-bottom: 10px; /* Space between the image and text content */
+   width: 100%;
+   /* Ensures the image fills the card width */
+   height: auto;
+   /* Keeps image aspect ratio intact */
+   border-radius: 5px;
+   /* Optional: rounds the corners of the image */
+   margin-bottom: 10px;
+   /* Space between the image and text content */
+   border: 1px solid #ccc;
 }
 
 .project-link {
-   display: flex;
-   justify-content: center;
-   margin: 5px 0; /* Spacing for links */
-   color: var(--link-color); /* Color for the links */
-   text-decoration: none; /* Removes underline from links */
+   display: block;
+   /* Makes the button a block element to fill the button container */
+   text-align: left;
+   /* Center the text inside the button */
+   margin: 5px auto;
+   /* Centers the button horizontally and adds vertical margin */
+   color: var(--link-color);
+   text-decoration: none;
+   width: auto;
+   /* Adjust width as needed or keep it auto */
 }
 
 .button-container {
-   margin-top: 10px; /* Space above the link buttons */
+   align-self: flex-start;
+   /* Aligns the button container to the start of the flex-end area, on the left */
+   width: 100%;
+   /* Makes the button container take up full width of the parent */
+   text-align: left;
+   /* Aligns the buttons to the left side of the button container */
+   margin-top: auto;
+   /* Pushes the button container to the bottom */
 }
+
 /* WORK PAGE STYLING */
 
 
@@ -467,7 +520,8 @@ body {
    text-align: center;
    max-width: 700px;
    margin: 0 auto;
-   padding-top: 120px; /* Ensure content starts below the navbar */
+   padding-top: 120px;
+   /* Ensure content starts below the navbar */
 }
 
 .contact_container {
@@ -481,9 +535,12 @@ body {
 }
 
 .form-submit-button {
-   display: block; /* Makes the button a block element */
-   margin: 20px auto; /* Centers the button horizontally */
-   width: 150px; /* You can adjust the width as needed */
+   display: block;
+   /* Makes the button a block element */
+   margin: 20px auto;
+   /* Centers the button horizontally */
+   width: 150px;
+   /* You can adjust the width as needed */
 }
 
 /* CONTACT PAGE STYLING */
