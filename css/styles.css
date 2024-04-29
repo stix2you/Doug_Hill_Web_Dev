@@ -191,9 +191,6 @@ button:focus,
 .page-header nav {
    position: relative;
 }
-
-
-
 /* PAGE HEADER STYLING */
 
 
@@ -246,7 +243,6 @@ button:focus,
    margin-bottom: 10px;
    /* Adds some space below the heading */
 }
-
 /* PAGE FOOTER STYLING */
 
 
@@ -338,6 +334,12 @@ body {
 .madison-picture {
    display: flex;
    justify-content: center;
+}
+
+.Schumann_Quote {
+   font-family: "Caveat", cursive;
+   font-size: var(--font-size-large);
+
 }
 
 /* Keyframes for the color change animation */
