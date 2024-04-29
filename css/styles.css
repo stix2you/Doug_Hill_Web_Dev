@@ -34,7 +34,10 @@ STYLING SECTIONS:
    --color-palette-1B: #98ABEE;
    --color-palette-1C: #1d24cA;
    --color-palette-1D: #201658;
+   --color-palette-1E: #000;
    --first-border-color: #ccc;
+   --background-color-1: #ffffff;
+   --background-color-2: #1B78C9;
 
    /* Button Colors: */
    --button-background: #7edaff;
@@ -51,32 +54,60 @@ STYLING SECTIONS:
    --animation-color-six: purple;
 }
 
+.dark-theme {
+   /* Dark Theme */
+   /* Color Palettes: */
+   --color-palette-1A: #000000;
+   --color-palette-1B: #232737;
+   --color-palette-1C: #62a9ff;
+   --color-palette-1D: #e6e9f5;
+   --color-palette-1E: #000;
+   --first-border-color: #ccc;
+   --background-color-1: #000000;
+   --background-color-2: #1B78C9;
+
+   /* Button Colors: */
+   --button-background: #7edaff;
+   --button-text: rgb(0, 0, 0);
+   --button-border-color: #000000;
+   --button-hover-border-color: #7edaff;
+}
+
 * {
    box-sizing: border-box;
 }
 
 h1 {
    font-size: var(--font-size-very-large);
+   color: var(--color-palette-1E);
 
 }
 
 body {
-   /* Define the main background color or image */
-   background-color: #f4f4f4; /* Light grey, adjust to your main background */
-   
+   /* Define the main background color or image ! */
+   background-color: var(--color-palette-1A);
    /* Apply a gradient overlay */
-   background-image: linear-gradient(to right, rgb(27, 120, 201), rgba(0, 0, 0, 0), rgba(255,255,255,0), rgb(27, 120, 201));
-   
+   background-image: linear-gradient(to right,
+         var(--background-color-2),
+         var(--background-color-1),
+         var(--background-color-1),
+         var(--background-color-2));
+
    /* Ensure the background covers the entire body and doesn't repeat */
    background-size: cover;
    background-repeat: no-repeat;
-   
+
    /* Optional: Use these if your content doesn't naturally fill the viewport height */
-   min-height: 100vh; /* 100% of the viewport height */
-   width: 100%; /* 100% of the viewport width */
-   margin: 0; /* Remove default margin */
-   padding: 0; /* Remove default padding */
+   min-height: 100vh;
+   /* 100% of the viewport height */
+   width: 100%;
+   /* 100% of the viewport width */
+   margin: 0;
+   /* Remove default margin */
+   padding: 0;
+   /* Remove default padding */
 }
+
 /* ROOT STYLING */
 
 
@@ -191,6 +222,7 @@ button:focus,
 .page-header nav {
    position: relative;
 }
+
 /* PAGE HEADER STYLING */
 
 
@@ -243,6 +275,7 @@ button:focus,
    margin-bottom: 10px;
    /* Adds some space below the heading */
 }
+
 /* PAGE FOOTER STYLING */
 
 
@@ -504,7 +537,7 @@ body {
    /* Center the text inside the button */
    margin: 5px auto;
    /* Centers the button horizontally and adds vertical margin */
-   color: var(--link-color);
+   color: var(--color-palette-1A);
    text-decoration: none;
    width: auto;
    /* Adjust width as needed or keep it auto */
@@ -561,15 +594,22 @@ body {
 }
 
 #thankYouModal {
-   display: none; /* Hidden by default */
-   position: fixed; /* Stay in place */
-   z-index: 1; /* Sit on top */
+   display: none;
+   /* Hidden by default */
+   position: fixed;
+   /* Stay in place */
+   z-index: 1;
+   /* Sit on top */
    left: 0;
    top: 0;
-   width: 100%; /* Full width */
-   height: 100%; /* Full height */
-   overflow: auto; /* Enable scroll if needed */
-   background-color: rgb(0,0,0,0.4); /* Black w/ opacity */
+   width: 100%;
+   /* Full width */
+   height: 100%;
+   /* Full height */
+   overflow: auto;
+   /* Enable scroll if needed */
+   background-color: rgb(0, 0, 0, 0.4);
+   /* Black w/ opacity */
 }
 
 /* CONTACT PAGE STYLING */
