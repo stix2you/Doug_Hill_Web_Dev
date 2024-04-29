@@ -60,6 +60,23 @@ h1 {
 
 }
 
+body {
+   /* Define the main background color or image */
+   background-color: #f4f4f4; /* Light grey, adjust to your main background */
+   
+   /* Apply a gradient overlay */
+   background-image: linear-gradient(to right, rgb(27, 120, 201), rgba(0, 0, 0, 0), rgba(255,255,255,0), rgb(27, 120, 201));
+   
+   /* Ensure the background covers the entire body and doesn't repeat */
+   background-size: cover;
+   background-repeat: no-repeat;
+   
+   /* Optional: Use these if your content doesn't naturally fill the viewport height */
+   min-height: 100vh; /* 100% of the viewport height */
+   width: 100%; /* 100% of the viewport width */
+   margin: 0; /* Remove default margin */
+   padding: 0; /* Remove default padding */
+}
 /* ROOT STYLING */
 
 
