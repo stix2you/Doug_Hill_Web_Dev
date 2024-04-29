@@ -6,9 +6,17 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Doug Hill - Portfolio Website</title>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet">
+
+
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Young+Serif&display=swap">
+
    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
    <link rel="stylesheet" type="text/css" href="css/normalize.css">
    <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -17,17 +25,11 @@
 <body>
 
    <header class="page-header">
-
       <!--LOGO UPPER LEFT-->
-      <img src="img/logo.svg" class="logo_image page-header__item" alt="Doug Hill Web Developer logo">
-
-      <!--h1 header text placement for accessibility-->
-      <div class="page-header__item">
-         <h1>Doug Hill<br>Web Developer</h1>
-      </div>
+      <img src="img/logo.png" class="logo_image page-header__item" alt="Doug Hill Web Developer logo">
 
       <!--MENU BAR-->
-      <nav class="page-header__item">
+      <nav class="page-header__item special">
          <ul role="menubar" class="navigation-list">
             <li role="presentation">
                <a href="index.html" class="navigation-list__item" role="menuitem">Home</a>
@@ -44,94 +46,98 @@
             </li>
          </ul>
       </nav>
-
    </header>
 
-   <main class="project-list">
+   <main class="work">
+      <div class="project-list">
+         <!-- PROJECT LIST GRID-->
+         <div class="project-list__item">
+            <h2>My Portfolio Website</h2>
+            <img src="img/portfolioImage.png" alt="Screenshot of the My Portfolio Site" class="project-image">
+            <p>
+               A simple HTML/CSS website, showcasing some styling skills. Created as part of the curriculum in Career
+               Foundry's Fullstack Developer Bootcamp, this was one of the first sites I created. </p>
+            <button href="https://github.com/stix2you/Doug_Hill_Web_Dev" class="project-link" target="_blank">See project on
+               GitHub!</button>
+         </div>
+         <div class="project-list__item">
+            <h2>Meet App</h2>
+            <img src="img/theMeetApp.png" alt="Screenshot of the Meet App" class="project-image">
+            <p>
+               Progressive Web App that allows users to search for a city and view a list of events happening there.
+               Built with React using a test-driven development (TDD) technique.
+               The application uses the Google Calendar API to fetch upcoming events.
+            </p>
+           
+               <button href="https://stix2you.github.io/meet/" class="project-link" target="_blank">Go to site</button>
+               <button href="https://github.com/stix2you/meet" class="project-link" target="_blank">See project on GitHub</button>
+            
+         </div>
+         <div class="project-list__item">
+            <h2>MyFlix App</h2>
+            <img src="img/myFlixImage.png" alt="Screenshot of the MyFlix App" class="project-image">
+            <p>
+               A movie database application built with React. Users can register, log in, and view information about
+               different movies, directors, and genres. They can also add and remove movies from their list of
+               favorites.
+               The application uses a REST API that I created with Node.js and Express.
+            </p>
+            <div class="button-container">
+               <button href="https://myflix-dhill-portfolio-site.netlify.app/" class="project-link" target="_blank">Go to
+                  site</button>
+            </div>
+            <div class="button-container">
 
-      <!-- PROJECT LIST GRID-->
-      <div class="project-list__item">
-         <h2>My Portfolio Website</h2>
-         <img src="img/portfolioImage.png" alt="Screenshot of the My Portfolio Site" class="project-image">
-         <p>
-            A simple HTML/CSS website, showcasing some styling skills. Created as part of the curriculum in Career
-            Foundry's Fullstack Developer Bootcamp, this was one of the first sites I created. </p>
-         <a href="https://github.com/stix2you/Doug_Hill_Web_Dev" class="project-link" target="_blank">See project on
-            GitHub!</a>
-      </div>
-      <div class="project-list__item">
-         <h2>Meet App</h2>
-         <img src="img/theMeetApp.png" alt="Screenshot of the Meet App" class="project-image">
-         <p>
-            Progressive Web App that allows users to search for a city and view a list of events happening there.
-            Built with React using a test-driven development (TDD) technique.
-            The application uses the Google Calendar API to fetch upcoming events.
-         </p>
-         <div class="button-container">
-            <a href="https://stix2you.github.io/meet/" class="project-link" target="_blank">Go to site</a>
-            <a href="https://github.com/stix2you/meet" class="project-link" target="_blank">See project on GitHub</a>
+               <button href="https://github.com/stix2you/myFlix-client" class="project-link" target="_blank">Client side code
+                  on
+                  GitHub</button>
+               <button href="https://github.com/stix2you/myFlix_api" class="project-link" target="_blank">API code on
+                  GitHub</button>
+            </div>
          </div>
-      </div>
-      <div class="project-list__item">
-         <h2>MyFlix App</h2>
-         <img src="img/myFlixImage.png" alt="Screenshot of the MyFlix App" class="project-image">
-         <p>
-            A movie database application built with React. Users can register, log in, and view information about
-            different movies, directors, and genres. They can also add and remove movies from their list of favorites.
-            The application uses a REST API that I created with Node.js and Express.
-         </p>
-         <div class="button-container">
-            <a href="https://myflix-dhill-portfolio-site.netlify.app/" class="project-link" target="_blank">Go to
-               site</a>
-         </div>
-         <div class="button-container">
+         <div class="project-list__item">
+            <h2>Pokédex</h2>
+            <img src="img/Pokedex.png" alt="Screenshot of the Pokédex App" class="project-image">
+            <p>
+               A simple JavaScript application built using jQuery and Bootstrap, drawing data from a public api.
+            </p>
+            <div class="button-container">
+               <button href="https://stix2you.github.io/simple_js_app/#" class="project-link" target="_blank">Go to
+                  site</button>
+            </div>
+            <div class="button-container">
 
-            <a href="https://github.com/stix2you/myFlix-client" class="project-link" target="_blank">Client side code on
-               GitHub</a>
-            <a href="https://github.com/stix2you/myFlix_api" class="project-link" target="_blank">API code on GitHub</a>
+               <button href="https://github.com/stix2you/simple_js_app" class="project-link" target="_blank">Code on
+                  GitHub</button>
+               <button href="https://pokeapi.co" class="project-link" target="_blank">RESTful Pokémon API</button>
+            </div>
          </div>
-      </div>
-      <div class="project-list__item">
-         <h2>Pokédex</h2>
-         <img src="img/Pokedex.png" alt="Screenshot of the Pokédex App" class="project-image">
-         <p>
-            A simple JavaScript application built using jQuery and Bootstrap, drawing data from a public api.
-         </p>
-         <div class="button-container">
-            <a href="https://stix2you.github.io/simple_js_app/#" class="project-link" target="_blank">Go to
-               site</a>
-         </div>
-         <div class="button-container">
-
-            <a href="https://github.com/stix2you/simple_js_app" class="project-link" target="_blank">Code on
-               GitHub</a>
-            <a href="https://pokeapi.co" class="project-link" target="_blank">RESTful Pokémon API</a>
-         </div>
-      </div>
-      <div class="project-list__item">
-         <h2>ChatApp</h2>
-         <img src="img/ChatApp.jpg" alt="Screenshot of the MyFlix App" class="project-image">
-         <p>
-            The ChatApp is a mobile app which provides users with a very basic CHAT interface, and options to share images and their location. It features Asynchronous offline storate on the client side, and a real-time Firebase/Firestore database on the server side. The app is built using React Native, Expo, and Google Firestore.
-         </p>
-         <div class="button-container">
-            <a href="https://github.com/stix2you/ChatApp" class="project-link" target="_blank">Code on
-               GitHub</a>
+         <div class="project-list__item">
+            <h2>ChatApp</h2>
+            <img src="img/ChatApp.jpg" alt="Screenshot of the MyFlix App" class="project-image">
+            <p>
+               The ChatApp is a mobile app which provides users with a very basic CHAT interface, and options to share
+               images and their location. It features Asynchronous offline storate on the client side, and a real-time
+               Firebase/Firestore database on the server side. The app is built using React Native, Expo, and Google
+               Firestore.
+            </p>
+            <div class="button-container">
+               <button href="https://github.com/stix2you/ChatApp" class="project-link" target="_blank">Code on
+                  GitHub</button>
+            </div>
          </div>
       </div>
    </main>
 
    <footer class="page_footer">
-      <p>Find me on</p>
+      <p class="footer_text">Find me on</p>
       <div class="social-media">
          <a href="https://github.com/stix2you" class="social-media__link" target="_blank">
             <img src="img/github_icon.svg" class="social-media__img" alt="github logo">
-            <button type="button" class="social-media__button">GitHub</button>
          </a>
          <!-- LinkedIn link -->
          <a href="https://www.linkedin.com/in/doug-hill-8b7634288/" class="social-media__link" target="_blank">
             <img src="img/linkedin_icon.svg" class="social-media__img" alt="linkedin logo">
-            <button type="button" class="social-media__button">LinkedIn</button>
          </a>
       </div>
    </footer>

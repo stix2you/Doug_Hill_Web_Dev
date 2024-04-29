@@ -5,10 +5,18 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Doug Hill - Portfolio Website</title>
+   <title>Doug Hill Portfolio</title>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet">
+
+
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Young+Serif&display=swap">
+
    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
    <link rel="stylesheet" type="text/css" href="css/normalize.css">
    <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -19,7 +27,7 @@
 
    <header class="page-header">
       <!--LOGO UPPER LEFT-->
-      <img src="img/logo.svg" class="logo_image page-header__item" alt="Doug Hill Web Developer logo">
+      <img src="img/logo.png" class="logo_image page-header__item" alt="Doug Hill Web Developer logo">
 
       <!--MENU BAR-->
       <nav class="page-header__item special">
@@ -50,19 +58,31 @@
       <div class="main-container">
          <div class="first-row">
             <img src="img/portrait.jpg" class="profile_portrait" alt="Doug Hill Portrait">
-             <div class="text-content">
-                 <h1>Douglas Hill</h1>
-                 <p>Web Developer from Madison, WI</p>
-             </div>
+            <div class="text-content">
+               <h1>Greetings!</h1>
+               <p class="introduction">
+                  <br>I am <span class="bold-span">Douglas Hill,</span> a certified
+                  <span class="bold-span">Full-Stack Web Developer</span> <br>
+                  from <span class="bold-span">Madison, Wisconsin</span> with a background in Automobile Mechanics,<br>
+                  Music, Pro Audio Sales, Management, and Aviation.  I bring <span class="bold-span"> 35 years </span>of successful<br>
+                  career experience to the table, a strong work ethic, and a dedication to lifelong learning and growing.<br>
+                  <br>
+                  My passion is <span class="bold-span">building, fixing,</span> and <span class="bold-span">creating,</span> with
+                  experience <span class="bold-span">managing</span> large projects, small businesses, and unique individuals. I am very eager to apply my life skills to pursue new opportunities in
+                  <span class="bold-span">Web Development!</span>
+                  
+               </p>
+            </div>
          </div>
          <div class="second-row">
             <div class="madison-picture">
-               <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="155.842mm" height="34.5511mm" version="1.1"
+               <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="155.842mm" height="34.5511mm"
+                  version="1.1"
                   style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                   viewBox="0 0 16683.7 3698.87" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <defs>
                      <style type="text/css">
-      
+
                      </style>
                   </defs>
                   <g id="Layer_x0020_1">
@@ -74,11 +94,12 @@
             </div>
          </div>
          <div class="third-row">
-            <a class="navigation-list__item" href="work.html">Check out some of my code</a>
+            <button type="button" class="nav_button" onclick="window.location.href='about.html';">About Me</button>
+            <button type="button" class="nav_button" onclick="window.location.href='work.html';">My Projects</button>
+            <button type="button" class="nav_button" onclick="window.location.href='contact.html';">Contact me</button>
+            <button href="files/cv.pdf" target="_blank" class="nav_button" download>Download my CV</button>
          </div>
-     </div>
-      
-
+      </div>
    </main>
 
 
@@ -87,16 +108,14 @@
 
 
    <footer class="page_footer">
-      <p>Find me on</p>
+      <p class="footer_text">Find me on</p>
       <div class="social-media">
          <a href="https://github.com/stix2you" class="social-media__link" target="_blank">
             <img src="img/github_icon.svg" class="social-media__img" alt="github logo">
-            <button type="button" class="social-media__button">GitHub</button>
          </a>
          <!-- LinkedIn link -->
          <a href="https://www.linkedin.com/in/doug-hill-8b7634288/" class="social-media__link" target="_blank">
             <img src="img/linkedin_icon.svg" class="social-media__img" alt="linkedin logo">
-            <button type="button" >LinkedIn</button>
          </a>
       </div>
    </footer>

@@ -17,29 +17,40 @@ STYLING SECTIONS:
 /* ROOT STYLING */
 :root {
    /* Font Styling: */
-   --font-family-1: Arial, sans-serif;
-   --font-family-2: 'Helvetica Neue', Arial, sans-serif;
+   --font-family-1: "Lato", sans-serif;
+   --font-family-2: "Lato", sans-serif;
+   /* --font-family-1: Arial, sans-serif;
+   --font-family-2: 'Helvetica Neue', Arial, sans-serif; */
+
    --font-size-very-large: 36px;
    --font-size-large: 30px;
    --font-size-medium-large: 24px;
    --font-size-medium: 18px;
    --font-size-small: 10px;
    --font-weight-bold: 700;
-   --font-weight-normal: 200;
+   --font-weight-normal: 400;
    --font-weight-light: 100;
 
-   /* Color Palette: */
-   --color-palette-1A: #f3e9d7;
+   /* Color Palettes: */
+   --color-palette-1A: #fff;
    --color-palette-1B: #98ABEE;
    --color-palette-1C: #1d24cA;
    --color-palette-1D: #201658;
    --color-palette-1E: #1d778d;
 
+   /* --color-palette-1A: #f3e9d7;
+   --color-palette-1B: #98ABEE;
+   --color-palette-1C: #1d24cA;
+   --color-palette-1D: #201658;
+   --color-palette-1E: #1d778d; */
+
+
+
    /* Button Colors: */
-   --button-background: #1d778d;
-   --button-text: white;
-   --button-border-color: #6ed3f0;
-   --first-border-color: #6ed3f0;
+   --button-background: #7edaff;
+   --button-text: rgb(0, 0, 0);
+   --button-border-color: #000000;
+   --button-hover-border-color: #7edaff;
 
    /* Animation Specific Colors: */
    --animation-color-one: red;
@@ -53,13 +64,19 @@ STYLING SECTIONS:
 * {
    box-sizing: border-box;
 }
+
+h1 {
+   font-size: var(--font-size-very-large);
+
+}
 /* ROOT STYLING */
 
 
 
 
 
-/* DEFAULT LINK STYLING */
+
+/* DEFAULT LINK/NAV STYLING */
 a {
    color: var(--color-palette-1D);
    text-decoration: none;
@@ -71,7 +88,7 @@ a:visited {
 
 a:hover,
 a:focus {
-   text-decoration: none;
+   text-decoration: underline;
    color: var(--color-palette-1C);
 }
 
@@ -79,7 +96,33 @@ a:active {
    color: var(--color-palette-1B);
    text-decoration: underline;
 }
-/* DEFAULT LINK STYLING */
+
+.button,
+button {
+   /* overwrites browser defaults and resets the border */
+   display: flex;
+   justify-content: center;
+   font-family: inherit;
+   font-size: var(--font-size-medium);
+   background-color: var(--button-background);
+   color: var(--button-text);
+   text-decoration: none;
+   padding: 10px;
+   border-width: 1px;
+   border-radius: 20px;
+   transition-duration: 0.2s;
+   transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+   cursor: pointer;
+   opacity: 0.8;
+   border-color: var(--button-hover-border-color);
+}
+/* DEFAULT LINK/NAV STYLING */
 
 
 
@@ -92,8 +135,10 @@ a:active {
    align-items: top;
    justify-content: center;
    width: 100%;
-   padding: 20px;
-   background-color: var(--color-palette-1A); /* Sets the background to same as body */
+   padding: 20px 50px;
+   background-color: var(--color-palette-1A);
+   position: fixed;
+   z-index: 1000; /* High z-index to ensure it's on top */
 }
 
 .special {
@@ -101,9 +146,10 @@ a:active {
 }
 
 .logo_image {
-   flex: 0 0 auto; /* Keeps the logo from growing */
-   width: 20%;
-   max-width: 200px;
+   flex: 0 0 auto;
+   /* Keeps the logo from growing */
+   width: 30%;
+   max-width: 400px;
    float: left;
 }
 
@@ -117,11 +163,10 @@ a:active {
 
 .navigation-list__item {
    padding: 0 15px;
-   color: black; /* Sets the text color to black */
-   font-family: var(--font-family-2); 
-   font-size: var(--font-size-medium); 
-   font-style: normal; 
-   text-decoration: none; /* Removes any underline from links */
+   color: black;
+   font-family: var(--font-family-2);
+   font-size: var(--font-size-medium);
+   font-style: normal;
 }
 
 .page-header__item:last-child {
@@ -129,7 +174,7 @@ a:active {
 }
 
 .page-header nav {
-   
+
    position: relative;
 }
 /* PAGE HEADER STYLING */
@@ -144,51 +189,33 @@ a:active {
 
 /* PAGE FOOTER STYLING */
 .page_footer {
-   text-align: center;
-   clear: both;
-   display: flex;
-   flex-direction: column;
-   text-decoration: none;
+   text-align: center; /* Centers the text horizontally */
+   display: flex; /* Uses flexbox to organize children */
+   flex-direction: column; /* Stacks children vertically */
+   align-items: center; /* Aligns children (such as h5 and .social-media) to the center horizontally */
+   margin-bottom: 20px; /* Adds some space below the footer */
 }
 
+/* Styling for the section containing the social media links */
 .social-media {
-   display: grid;
-   grid-template-columns: 100px 100px;
-   grid-gap: 20px;
-   justify-content: center;
-   text-decoration: none;
+   display: flex; /* Changes layout to flex to bring icons closer */
+   align-items: center; /* Vertically centers the icons in the container */
+   justify-content: center; /* Horizontally centers the icons in their container */
+   gap: 10px; /* Sets a gap between the icons */
 }
 
+/* Styling for the social media images */
 .social-media__img {
-   margin-left: 0px;
+   width: 40px; /* Sets a fixed width for the icons */
+   height: auto; /* Maintains aspect ratio of icons */
+   cursor: pointer; /* Changes the cursor to a pointer to indicate these are clickable */
 }
 
-.button,
-button {
-   /* overwrites browser defaults and resets the border */
-   display: flex;
-   justify-content: center;
-   font-family: inherit;
-   font-size: var(--font-size-medium);
-   background-color: var(--button-background);
-   color: var(--button-text);
-   text-decoration: none;
-   padding: 10px;
-   border-radius: 3px;
-   border-bottom: 2px solid var(--button-border-color);
-   transition-duration: 0.2s;
-   transition-property: opacity;
-}
-
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-   cursor: pointer;
-   opacity: 0.8;
+.footer_text {
+   font-size: var(--font-size-medium); /* Sets the font size for the footer text */
+   margin-bottom: 10px; /* Adds some space below the heading */
 }
 /* PAGE FOOTER STYLING */
-
 
 
 
@@ -201,26 +228,28 @@ body {
    background-color: var(--color-palette-1A);
    margin: 0;
    font-family: var(--font-family-1);
-   font-weight: var(--font-weight-bold);
-   font-size: var(--font-size-large);
    line-height: 1.5;
    color: var(--color-palette-1D);
 }
 
 .main-container {
-   width: 90%;  /* Adjust width as necessary */
-   max-width: 1200px;   /* Maximum width of the container */
-   margin: auto;   /* This centers the container horizontally */
-   text-align: center;   /* Aligns text to center in child elements */
-   padding: 20px;   /* Adds spacing inside the container */
-   
+   width: 90%;
+   max-width: 1200px;
+   margin: auto;
+   text-align: center;
+   padding: 20px;
+
 }
 
 .first-row {
-   display: flex;   /* Creates a flexbox layout */
-   align-items: center;   /* Vertically centers the items in the flex container */
-   justify-content: center;   /* Horizontally centers the content */
-   margin-bottom: 20px;   /* Adds bottom margin for spacing */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 20px;
+}
+
+.profile {
+   padding-top: 120px;
 }
 
 .profile_portrait {
@@ -228,64 +257,91 @@ body {
    max-width: 250px;
    float: left;
    margin-right: 20px;
-   border-radius: 50%;
-   height: auto;   /* Maintain aspect ratio */
+   border-radius: 30%;
+   height: auto;
 }
 
 .text-content h1,
 .text-content p {
-   margin: 0;   /* Removes default margin */
-   padding: 0;    /* Ensures no padding is present */
+   text-align: left;
+   margin: 0;
+   padding: 0;
+}
+
+.introduction {
+   text-align: left;
+   font-size: var(--font-size-medium);
+   font-weight: var(--font-weight-normal);
+}
+
+.bold-span {
+   font-size: var(--font-size-medium-large);
+   font-weight: var(--font-weight-bold);
 }
 
 .second-row img {
-   width: 100%;   /* Makes the image take the full width of the container */
-   max-width: 600px;   /* Limits the maximum width to keep the design tidy */
-   height: auto;   /* Maintain aspect ratio */
+   width: 100%;
+   max-width: 600px;
+   height: auto;
 }
 
 .third-row {
-   margin-top: 20px;   /* Adds top margin for spacing above the row */
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+
 }
 
-.third-row p,
-.third-row a {
-   display: block;   /* Makes each element take a full row */
-   margin: 10px 0;   /* Adds vertical spacing */
+.nav_button {
+   margin: 0 10px;
+   border-radius: 20px;
 }
 
+.madison-picture img {
+   width: 100%;
+   max-width: 600px;
+   height: auto;
+}
 .madison-picture {
    display: flex;
    justify-content: center;
 }
 
 /* Keyframes for the color change animation */
-@keyframes color-change {  
+@keyframes color-change {
    0% {
       fill: var(--animation-color-one);
    }
+
    10% {
       fill: var(--animation-color-two);
    }
+
    30% {
       fill: var(--animation-color-three);
    }
+
    50% {
       fill: var(--animation-color-four);
    }
+
    70% {
       fill: var(--animation-color-five);
    }
+
    90% {
       fill: var(--animation-color-six);
    }
+
    100% {
       fill: var(--animation-color-one);
    }
 }
+
 .skyline {
    animation: 10s color-change infinite normal linear;
 }
+
 /* INDEX PAGE STYLING */
 
 
@@ -298,23 +354,27 @@ body {
    text-align: center;
    max-width: 700px;
    margin: 0 auto;
+   padding-top: 120px; /* Ensure content starts below the navbar !!! */
 }
 
-/* Styling the ordered list container */
+/* Styling the ordered list grid container */
 .tech-stack {
-   padding-left: 0;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+   grid-gap: 20px;
+   padding: 0;
    list-style-type: none;
+   margin: 0 20px;
 }
 
 /* Styling each list item in the ordered list */
 .tech-stack>li {
-   margin: 20px 200px 60px 200px;
    background-color: var(--color-palette-1A);
    border: 1px solid var(--first-border-color);
    padding: 15px 20px;
    border-radius: 8px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-   font-size: var(--font-size-large);
+   font-size: var(--font-size-medium); 
    font-weight: var(--font-weight-light);
    color: var(--color-palette-1C);
 }
@@ -323,8 +383,8 @@ body {
 .tech-stack ul {
    padding-left: 20px;
    list-style-type: none;
-   font-size: var(--font-size-medium);
-   color: var(--color-palette-1D)
+   font-size: 0.8em; 
+   color: var(--color-palette-1D);
 }
 
 /* Styling list items in nested lists */
@@ -334,8 +394,8 @@ body {
 
 /* Styling bullets for nested list items with a custom character */
 .tech-stack ul li:before {
-   content: "— ";  /* En dash for a bullet point look */
-   color: #555;   /* Dark gray color for bullets */
+   content: "— "; /* En dash for a bullet point look */
+   color: #555; /* Dark gray color for bullets */
    padding-right: 5px;
 }
 /* ABOUT PAGE STYLING */
@@ -343,68 +403,56 @@ body {
 
 
 
+/* PROJECT LIST STYLING */
+.work {
+   text-align: center;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding-top: 120px; /* Ensure content starts below the navbar */
+}
 
-
-/* WORK PAGE STYLING */
 .project-list {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;  /* rows defaults to same as columns unless specified */
-   grid-gap: 20px;
+   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adapts number of columns based on the screen width */
+   grid-gap: 20px; /* Space between cards */
+   padding: 20px; /* Padding around the entire grid */
+   margin: 0 auto; /* Centers the grid in the section */
+   max-width: 1200px; /* Maximum width of the grid */
 }
 
 .project-list__item {
-   margin: 10px;
-   background-color: var(--color-palette-1A);
-   border: 1px solid var(--first-border-color);
-   padding: 15px 20px;
-   border-radius: 8px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-   font-size: var(--font-size-large);
-   font-weight: var(--font-weight-light);
-   color: var(--color-palette-1C);
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+   background-color: var(--color-palette-1A); /* Background color for each card */
+   border: 1px solid var(--first-border-color); /* Border styling */
+   padding: 15px; /* Padding inside each card */
+   border-radius: 8px; /* Rounded corners for the cards */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+   transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
 
-.button-container {
-   display: flex;   /* Uses flexbox to align children side by side */
-   justify-content: space-around;   /* Distributes space around the buttons equally */
-   margin-top: 10px;   /* Adds a margin on top for spacing from the text above */
-}
-
-.project-link,
-.project-link:visited {
-   display: inline-block;
-   padding: 8px 12px;
-   margin: 0 5px;
-   background-color: var(--color-palette-1A);
-   color: #007BFF;
-   text-align: center;
-   border-radius: 5px;
-   text-decoration: none;
-   border: 1px solid var(--first-border-color);
-   transition: 0.3s;
-   font-size: var(--font-size-medium-large);
-   font-weight: var(--font-weight-normal);
-}
-
-.project-link:hover {
-   background-color: var(--color-palette-1B);
-   color: #add5ff;
+.project-list__item:hover {
+   transform: translateY(-5px); /* Slight raise effect on hover */
 }
 
 .project-image {
-   display: inline-block;
-   max-width: 100%;
-   height: auto;
-   max-height: 350px;
-   margin: 10px 0;
-   border-radius: 8px;
-   border: 1px solid var(--first-border-color);
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   width: 100%; /* Ensures the image fills the card width */
+   height: auto; /* Keeps image aspect ratio intact */
+   border-radius: 5px; /* Optional: rounds the corners of the image */
+   margin-bottom: 10px; /* Space between the image and text content */
+}
+
+.project-link {
+   display: flex;
+   justify-content: center;
+   margin: 5px 0; /* Spacing for links */
+   color: var(--link-color); /* Color for the links */
+   text-decoration: none; /* Removes underline from links */
+}
+
+.button-container {
+   margin-top: 10px; /* Space above the link buttons */
 }
 /* WORK PAGE STYLING */
+
 
 
 
@@ -414,13 +462,30 @@ body {
 
 
 /* CONTACT PAGE STYLING */
+
 .contact {
    text-align: center;
+   max-width: 700px;
+   margin: 0 auto;
+   padding-top: 120px; /* Ensure content starts below the navbar */
+}
+
+.contact_container {
+   text-align: center;
+   padding: 0 0;
    font-size: var(--font-size-medium);
    font-weight: var(--font-weight-normal);
    max-width: 700px;
    margin: 0 auto;
+   justify-content: center;
 }
+
+.form-submit-button {
+   display: block; /* Makes the button a block element */
+   margin: 20px auto; /* Centers the button horizontally */
+   width: 150px; /* You can adjust the width as needed */
+}
+
 /* CONTACT PAGE STYLING */
 
 
@@ -437,14 +502,14 @@ body {
    }
 
    .logo_image {
-     width: 100px;
-     background-color: black;
-   
+      width: 100px;
+      background-color: black;
+
    }
-   
+
    .page-header {
       padding: 10px;
-      
+
    }
 
    .project-list {
@@ -508,7 +573,7 @@ body {
 @media (max-width: 900px) {
    .navigation-list {
       display: flex;
-     
+
       align-items: flex-end;
       margin-left: 0;
    }
@@ -520,7 +585,109 @@ body {
    }
 }
 
-
-
-
 /* RESPONSIVE STYLING */
+
+
+
+
+
+
+
+
+
+
+/* SLIDESHOW STYLING */
+
+/* Slideshow container */
+.slideshow-container {
+   max-width: 1000px;
+   position: relative;
+   margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+   display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   width: auto;
+   margin-top: -22px;
+   padding: 16px;
+   color: white;
+   font-weight: bold;
+   font-size: 18px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+   right: 0;
+   border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+   background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+   color: #f2f2f2;
+   font-size: 15px;
+   padding: 8px 12px;
+   position: absolute;
+   bottom: 8px;
+   width: 100%;
+   text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+   color: #f2f2f2;
+   font-size: 12px;
+   padding: 8px 12px;
+   position: absolute;
+   top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+   cursor: pointer;
+   height: 15px;
+   width: 15px;
+   margin: 0 2px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+   background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+   animation-name: fade;
+   animation-duration: 1.5s;
+}
+
+@keyframes fade {
+   from {
+      opacity: .4
+   }
+
+   to {
+      opacity: 1
+   }
+}
