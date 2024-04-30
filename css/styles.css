@@ -676,12 +676,13 @@ body {
 /* RESPONSIVE STYLING */
 /* Styles for narrow screens: max-width 500px */
 @media (max-width:450px) {
-   .navigation-list {
+   /* .navigation-list {
       flex-direction: column;
-   }
+   } */
 
    .logo_image {
       width: 100px;
+      height: auto;
       background-color: black;
 
    }
