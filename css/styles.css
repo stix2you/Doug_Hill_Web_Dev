@@ -86,28 +86,19 @@ h1 {
 body {
    /* Define the main background color or image ! */
    background-color: var(--color-palette-1A);
-   /* Apply a gradient overlay */
+   /* Apply a gradient overlay as the background -- colors can be set by variables at top of file */
    background-image: linear-gradient(to right,
          var(--background-color-2),
          var(--background-color-1),
          var(--background-color-1),
          var(--background-color-2));
-
-   /* Ensure the background covers the entire body and doesn't repeat */
    background-size: cover;
    background-repeat: no-repeat;
-
-   /* Optional: Use these if your content doesn't naturally fill the viewport height */
    min-height: 100vh;
-   /* 100% of the viewport height */
    width: 100%;
-   /* 100% of the viewport width */
    margin: 0;
-   /* Remove default margin */
    padding: 0;
-   /* Remove default padding */
 }
-
 /* ROOT STYLING */
 
 
@@ -147,6 +138,7 @@ button {
    transition-property: opacity;
 }
 
+/* hover effects combined so they are consistent across the page*/
 a:hover,
 a:focus,
 button:hover,
@@ -174,8 +166,7 @@ button:focus,
    padding: 20px 50px;
    background-color: var(--color-palette-1A);
    position: fixed;
-   z-index: 1000;
-   /* High z-index to ensure it's on top */
+   z-index: 1000;   /* High z-index to ensure it's on top (navbar and all header items) */
 }
 
 .special {
@@ -183,8 +174,7 @@ button:focus,
 }
 
 .logo_image {
-   flex: 0 0 auto;
-   /* Keeps the logo from growing */
+   flex: 0 0 auto;   /* Keeps the logo from growing */
    width: 30%;
    max-width: 400px;
    float: left;
@@ -272,7 +262,6 @@ button:focus,
       inset 0 4px 4px rgba(255, 255, 255, 1),
       inset 0 -4px 4px rgba(255, 255, 255, 1);
 }
-
 /* PAGE HEADER STYLING */
 
 
@@ -286,46 +275,31 @@ button:focus,
 /* PAGE FOOTER STYLING */
 .page_footer {
    text-align: center;
-   /* Centers the text horizontally */
    display: flex;
-   /* Uses flexbox to organize children */
    flex-direction: column;
-   /* Stacks children vertically */
    align-items: center;
-   /* Aligns children (such as h5 and .social-media) to the center horizontally */
    margin-bottom: 20px;
-   /* Adds some space below the footer */
 }
 
 /* Styling for the section containing the social media links */
 .social-media {
    display: flex;
-   /* Changes layout to flex to bring icons closer */
    align-items: center;
-   /* Vertically centers the icons in the container */
    justify-content: center;
-   /* Horizontally centers the icons in their container */
    gap: 10px;
-   /* Sets a gap between the icons */
 }
 
 /* Styling for the social media images */
 .social-media__img {
    width: 40px;
-   /* Sets a fixed width for the icons */
    height: auto;
-   /* Maintains aspect ratio of icons */
    cursor: pointer;
-   /* Changes the cursor to a pointer to indicate these are clickable */
 }
 
 .footer_text {
    font-size: var(--font-size-medium);
-   /* Sets the font size for the footer text */
    margin-bottom: 10px;
-   /* Adds some space below the heading */
 }
-
 /* PAGE FOOTER STYLING */
 
 
@@ -522,6 +496,13 @@ body {
    color: #555;
    /* Dark gray color for bullets */
    padding-right: 5px;
+}
+
+.cv_download_wide {
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
 }
 
 /* ABOUT PAGE STYLING */

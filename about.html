@@ -18,16 +18,16 @@
 
    <header class="page-header">
       <!--LOGO UPPER LEFT-->
-      <img src="img/logo.png" class="logo_image page-header__item" alt="Doug Hill Web Developer logo">
-
+      <img onclick="window.location.href='index.html';" src="img/logo.png" class="logo_image"
+         alt="Doug Hill Web Developer logo">
       <!--MENU BAR-->
       <nav class="page-header__item special">
          <ul role="menubar" class="navigation-list">
             <li role="presentation">
-               <a href="index.html" class="navigation-list__item" role="menuitem">Home</a>
+               <a href="index.html" class="navigation-list__item navigation-list__item--active" role="menuitem">Home</a>
             </li>
             <li role="presentation">
-               <a href="about.html" class="navigation-list__item navigation-list__item--active" role="menuitem"
+               <a href="about.html" class="navigation-list__item" role="menuitem"
                   aria-label="Information about me">About</a>
             </li>
             <li role="presentation">
@@ -38,12 +38,18 @@
             </li>
          </ul>
       </nav>
-
-      <!-- Theme Toggle Button -->
+      <!-- LIGHT/DARK THEME TOGGLE BUTTON -->
       <div class="light_dark_label">Dark/Light</div>
       <div id="toggle" class="theme-toggle active" onclick="toggleTheme()">
          <i class="indicator"></i>
       </div>
+   </header>
+
+   <!-- Theme Toggle Button -->
+   <div class="light_dark_label">Dark/Light</div>
+   <div id="toggle" class="theme-toggle active" onclick="toggleTheme()">
+      <i class="indicator"></i>
+   </div>
    </header>
 
    </header>
@@ -190,28 +196,31 @@
             spent
             about 10
             years completely immersed in this world before deciding to make a change to better support my family.
-         <br><br>
-         During this time however, again I found I gravitated to the computer side of the business.  My last six months
-         at Full Compass Systems found me managing web sales.  Back in 2004, the web was still a new frontier for
-         sales, and so we did little more than sell on eBay and Amazon.  But it did give me insight into the potential
-         of the web for sales, and I began to see the potential for the web to be a powerful tool for business. I also 
-         developed the workflow for web sales, and managed that along with customer communications.
+            <br><br>
+            During this time however, again I found I gravitated to the computer side of the business. My last six
+            months
+            at Full Compass Systems found me managing web sales. Back in 2004, the web was still a new frontier for
+            sales, and so we did little more than sell on eBay and Amazon. But it did give me insight into the potential
+            of the web for sales, and I began to see the potential for the web to be a powerful tool for business. I
+            also
+            developed the workflow for web sales, and managed that along with customer communications.
          </p>
 
          <h3>Captioning for the Hearing Impaired</h3>
 
          <p>In an effort to supplement my income, for about 10 years I worked for a company who produced a phone which
-            provided real time captions to their clients, directly on the telephone.  It was part time, and I was mostly 
+            provided real time captions to their clients, directly on the telephone. It was part time, and I was mostly
             a captionist, using programs like ViaVoice and Dragon to produce captions along with a keyboard and macros.
             <br><br>
-            However, I was often pulled off the phones to assist in training and quality control.  I was one of several
-            people who helped to transition captionists from training to on-the-floor captioning, which took about a week of
-            sit-behind monitoring and coaching.  I also helped to monitor calls and provide feedback to captionists, in order
-            to improve captions.  Working closely with managers and the training team over the course of the 10 years I was 
-            there, I learned a great deal about managing and training people. 
+            However, I was often pulled off the phones to assist in training and quality control. I was one of several
+            people who helped to transition captionists from training to on-the-floor captioning, which took about a
+            week of
+            sit-behind monitoring and coaching. I also helped to monitor calls and provide feedback to captionists, in
+            order
+            to improve captions. Working closely with managers and the training team over the course of the 10 years I
+            was
+            there, I learned a great deal about managing and training people.
          </p>
-
-
 
          <h2>Other hobbies and interests:</h2>
          <p>Single engine airplane pilot since age 17
@@ -225,7 +234,9 @@
             and headed towards the Peace Corps after graduation
          </p>
 
-         <a href="files/cv.pdf" target="_blank" class="button" download>Download my CV</a>
+         <a class="cv_download_wide" href="files/Doug_Hill_Resume.pdf" download="Doug_Hill_Resume.pdf">
+            <button type="button" class="nav_button">Download my CV</button>
+         </a>
 
       </div>
 
