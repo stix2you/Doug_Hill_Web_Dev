@@ -680,6 +680,9 @@ body {
       flex-direction: column;
    } */
 
+   .nav_button {
+      margin: 0 1px;
+
    .logo_image {
       width: 100px;
       height: auto;
