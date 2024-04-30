@@ -279,6 +279,7 @@ button:focus,
       inset 0 4px 4px rgba(255, 255, 255, 1),
       inset 0 -4px 4px rgba(255, 255, 255, 1);
 }
+
 /* PAGE HEADER STYLING */
 
 
@@ -331,6 +332,7 @@ button:focus,
    margin-bottom: 10px;
    /* Adds some space below the heading */
 }
+
 /* PAGE FOOTER STYLING */
 
 
@@ -463,6 +465,7 @@ body {
 .skyline {
    animation: 10s color-change infinite normal linear;
 }
+
 /* INDEX PAGE STYLING */
 
 
@@ -675,25 +678,69 @@ body {
 
 /* RESPONSIVE STYLING */
 /* Styles for narrow screens: max-width 500px */
-@media (max-width:450px) {
-   /* .navigation-list {
+@media (max-width: 450px) {
+   .page-header {
+      display: flex;
       flex-direction: column;
-   } */
-
-   .nav_button {
-      margin: 0 1px;
+      align-items: center;
+      /* Center everything in the column */
+      padding: 10px;
    }
 
    .logo_image {
-      width: 100px;
+      width: 100%;
       height: auto;
       background-color: black;
-
+      margin-bottom: 20px;
+      /* Space between logo and navigation */
    }
 
-   .page-header {
-      padding: 10px;
+   .special {
+      display: flex;
+      justify-content: center;
+      /* Center navigation items */
+      width: 100%;
+      /* Full width */
+      margin: 10px 0;
+      /* Space above and below navigation */
+   }
 
+   .navigation-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      /* Spread items across the width */
+      list-style: none;
+      /* Remove list bullets */
+      padding: 0;
+      /* Remove default padding */
+      width: 100%;
+      /* Full width */
+   }
+
+   .navigation-list__item {
+      padding: 10px;
+      /* Padding for clickable area */
+   }
+
+   .light_dark_label {
+      position: absolute;
+      right: 90px;
+      top: 72px;
+   }
+
+   #toggle {
+      position: absolute;
+      right: 30px;
+      /* Space from right edge */
+      top: 80px;
+      /* Space from top edge */
+   }
+
+   .third-row {
+      display: flex;
+      flex-direction: column;
+      /* Stack buttons vertically */
    }
 
    .project-list {
@@ -707,17 +754,14 @@ body {
 
    h2,
    p,
-   a {
-      font-size: 14px;
-      /* Smaller text on very small screens */
-   }
-
+   a,
    .project-link,
    .project-link:visited {
       font-size: 14px;
       /* Smaller text on very small screens */
    }
 }
+
 
 /* Styles for medium screens: between 501px and 750px */
 @media (min-width: 801px) and (max-width: 1200px) {
