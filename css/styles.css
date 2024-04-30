@@ -327,7 +327,6 @@ button:focus,
    font-size: var(--font-size-medium);
    margin-bottom: 10px;
 }
-
 /* PAGE FOOTER STYLING */
 
 
@@ -411,8 +410,9 @@ body {
 }
 
 .nav_button {
-   margin: 0 10px;
+   margin: 10px;
    border-radius: 20px;
+   padding: 10px;
 }
 
 .madison-picture img {
@@ -466,7 +466,6 @@ body {
 .skyline {
    animation: 10s color-change infinite normal linear;
 }
-
 /* INDEX PAGE STYLING */
 
 
@@ -533,7 +532,6 @@ body {
    margin-top: 20px;
    margin-bottom: 20px;
 }
-
 /* ABOUT PAGE STYLING */
 
 
@@ -551,7 +549,6 @@ body {
 .project-list {
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-   /* Adapts number of columns based on the screen width */
    grid-gap: 20px;
    /* Space between cards */
    padding: 20px;
@@ -569,6 +566,8 @@ body {
    /* Stack children vertically */
    justify-content: space-between;
    /* Align children to space between */
+   align-items: center;
+   /* Center children horizontally */
    background-color: var(--color-palette-1A);
    border: 1px solid var(--border-color-1);
    padding: 15px;
@@ -597,27 +596,15 @@ body {
 .project-link {
    display: block;
    /* Makes the button a block element to fill the button container */
-   text-align: left;
+   text-align: center;
    /* Center the text inside the button */
    margin: 5px auto;
    /* Centers the button horizontally and adds vertical margin */
    color: var(--color-palette-1A);
    text-decoration: none;
-   width: auto;
+   width: 100%;
    /* Adjust width as needed or keep it auto */
 }
-
-.button-container {
-   align-self: flex-start;
-   /* Aligns the button container to the start of the flex-end area, on the left */
-   width: 100%;
-   /* Makes the button container take up full width of the parent */
-   text-align: left;
-   /* Aligns the buttons to the left side of the button container */
-   margin-top: auto;
-   /* Pushes the button container to the bottom */
-}
-
 /* WORK PAGE STYLING */
 
 
@@ -629,7 +616,6 @@ body {
 
 
 /* CONTACT PAGE STYLING */
-
 .contact {
    text-align: center;
    max-width: 700px;
