@@ -223,6 +223,62 @@ button:focus,
    position: relative;
 }
 
+.light_dark_label {
+   position: absolute;
+   top: 80px;
+   right: 60px;
+   padding: 10px;
+   cursor: pointer;
+}
+
+#toggle {
+   position: absolute;
+   top: 60px;
+   right: 80px;
+   display: block;
+   width: 60px;
+   height: 30px;
+   border-radius: 160px;
+   background: #222;
+   transition: 0.5s;
+   cursor: pointer;
+   box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+      inset 0 8px 8px rgba(0, 0, 0, 0.1),
+      inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+
+
+}
+
+#toggle.active {
+   background: #fff;
+   box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+      inset 0 2px 8px rgba(0, 0, 0, 0.1),
+      inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#toggle .indicator {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 30px;
+   height: 30px;
+   background: linear-gradient(to bottom, #444, #222);
+   border-radius: 50%;
+   transform: scale(0.9);
+   box-shadow: inset 0 8px 40px rgba(0, 0, 0, 0.5),
+      inset 0 4px 4px rgba(255, 255, 255, 0.2),
+      inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+   transition: 0.5s;
+
+}
+
+#toggle.active .indicator {
+   left: 30px;
+   background: linear-gradient(to bottom, #EAEAEA, #F9F9F9);
+   box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.1),
+      inset 0 4px 4px rgba(255, 255, 255, 1),
+      inset 0 -4px 4px rgba(255, 255, 255, 1);
+}
 /* PAGE HEADER STYLING */
 
 
@@ -275,7 +331,6 @@ button:focus,
    margin-bottom: 10px;
    /* Adds some space below the heading */
 }
-
 /* PAGE FOOTER STYLING */
 
 
@@ -350,7 +405,6 @@ body {
    display: flex;
    justify-content: center;
    margin-top: 20px;
-
 }
 
 .nav_button {
@@ -409,7 +463,6 @@ body {
 .skyline {
    animation: 10s color-change infinite normal linear;
 }
-
 /* INDEX PAGE STYLING */
 
 
