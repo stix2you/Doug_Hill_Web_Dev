@@ -125,12 +125,6 @@ a:visited {
    color: var(--color-palette-1D);
 }
 
-a:hover,
-a:focus {
-   text-decoration: underline;
-   color: var(--color-palette-1C);
-}
-
 a:active {
    color: var(--color-palette-1B);
    text-decoration: underline;
@@ -153,6 +147,8 @@ button {
    transition-property: opacity;
 }
 
+a:hover,
+a:focus,
 button:hover,
 button:focus,
 .button:hover,
