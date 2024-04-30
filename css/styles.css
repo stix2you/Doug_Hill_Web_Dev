@@ -11,8 +11,11 @@ STYLING SECTIONS:
 7. Work Page Styling
 8. Contact Page Styling
 9. Responsive Styling
-*/
+10. Slideshow Styling
 
+NOTE: All colors are managed by variables for consistency and easy tuning 
+EXCEPT box shadows due to the complexity of the shadow property and the need for multiple values to be set. 
+*/
 
 /* ROOT STYLING */
 :root {
@@ -35,13 +38,14 @@ STYLING SECTIONS:
    --color-palette-1C: #1d24cA;
    --color-palette-1D: #201658;
    --color-palette-1E: #000;
-   --first-border-color: #ccc;
+   --border-color-1: #ccc;
    --background-color-1: #ffffff;
    --background-color-2: #1B78C9;
+   --bullet-color: #555;
 
    /* Button Colors: */
    --button-background: #7edaff;
-   --button-text: rgb(0, 0, 0);
+   --button-text: #000;
    --button-border-color: #000000;
    --button-hover-border-color: #7edaff;
 
@@ -52,6 +56,22 @@ STYLING SECTIONS:
    --animation-color-four: green;
    --animation-color-five: blue;
    --animation-color-six: purple;
+
+   /* TOGGLE COLORS */
+   --toggle-background: #222;
+   --toggle-active-background: #fff;
+   --toggle-background-linear-gradient-light: #444;
+   --toggle-background-linear-gradient-dark: #222;
+   --toggle-active-background-linear-gradient-light: #eaeaea;
+   --toggle-active-background-linear-gradient-dark: #f9f9f9;
+   --toggle-indicator-background: #444;
+   --toggle-indicator-active-background: #EAEAEA;
+
+   /* SLIDESHOW COLORS */
+   --slideshow-background: rgba(0, 0, 0, 0.8);
+   --slideshow-caption-text: #f2f2f2;
+   --slideshow-dot-color: #bbb;
+   --slideshow-dot-active-color: #717171;
 }
 
 .dark-theme {
@@ -62,7 +82,7 @@ STYLING SECTIONS:
    --color-palette-1C: #62a9ff;
    --color-palette-1D: #e6e9f5;
    --color-palette-1E: #000;
-   --first-border-color: #ccc;
+   --border-color-1: #ccc;
    --background-color-1: #000000;
    --background-color-2: #1B78C9;
 
@@ -99,6 +119,7 @@ body {
    margin: 0;
    padding: 0;
 }
+
 /* ROOT STYLING */
 
 
@@ -166,7 +187,8 @@ button:focus,
    padding: 20px 50px;
    background-color: var(--color-palette-1A);
    position: fixed;
-   z-index: 1000;   /* High z-index to ensure it's on top (navbar and all header items) */
+   z-index: 1000;
+   /* High z-index to ensure it's on top (navbar and all header items) */
 }
 
 .special {
@@ -174,7 +196,8 @@ button:focus,
 }
 
 .logo_image {
-   flex: 0 0 auto;   /* Keeps the logo from growing */
+   flex: 0 0 auto;
+   /* Keeps the logo from growing */
    width: 30%;
    max-width: 400px;
    float: left;
@@ -190,7 +213,7 @@ button:focus,
 
 .navigation-list__item {
    padding: 0 15px;
-   color: black;
+   color: var(--color-palette-1E);
    font-family: var(--font-family-2);
    font-size: var(--font-size-medium);
    font-style: normal;
@@ -225,7 +248,7 @@ button:focus,
    width: 60px;
    height: 30px;
    border-radius: 160px;
-   background: #222;
+   background: var(--toggle-background);
    transition: 0.5s;
    cursor: pointer;
    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
@@ -234,7 +257,7 @@ button:focus,
 }
 
 #toggle.active {
-   background: #fff;
+   background: var(--toggle-active-background);
    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
       inset 0 2px 8px rgba(0, 0, 0, 0.1),
       inset 0 -4px 4px rgba(0, 0, 0, 0.1);
@@ -246,7 +269,9 @@ button:focus,
    left: 0px;
    width: 30px;
    height: 30px;
-   background: linear-gradient(to bottom, #444, #222);
+   background: linear-gradient(to bottom,
+         var(--toggle-background-linear-gradient-light),
+         var(--toggle-background-linear-gradient-dark));
    border-radius: 50%;
    transform: scale(0.9);
    box-shadow: inset 0 8px 40px rgba(0, 0, 0, 0.5),
@@ -257,7 +282,9 @@ button:focus,
 
 #toggle.active .indicator {
    left: 30px;
-   background: linear-gradient(to bottom, #EAEAEA, #F9F9F9);
+   background: linear-gradient(to bottom,
+         var(--toggle-active-background-linear-gradient-light),
+         var(--toggle-active-background-linear-gradient-dark));
    box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.1),
       inset 0 4px 4px rgba(255, 255, 255, 1),
       inset 0 -4px 4px rgba(255, 255, 255, 1);
@@ -300,6 +327,7 @@ button:focus,
    font-size: var(--font-size-medium);
    margin-bottom: 10px;
 }
+
 /* PAGE FOOTER STYLING */
 
 
@@ -355,7 +383,8 @@ body {
 
 .introduction_header {
    color: var(--color-palette-1D);
-   padding-top: 120px; /* Ensure content starts below the navbar */
+   padding-top: 120px;
+   /* Ensure content starts below the navbar */
 }
 
 .introduction {
@@ -467,7 +496,7 @@ body {
 /* Styling each list item in the ordered list */
 .tech-stack>li {
    background-color: var(--color-palette-1A);
-   border: 1px solid var(--first-border-color);
+   border: 1px solid var(--border-color-1);
    padding: 15px 20px;
    border-radius: 8px;
    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
@@ -493,7 +522,7 @@ body {
 .tech-stack ul li:before {
    content: "— ";
    /* En dash for a bullet point look */
-   color: #555;
+   color: var(--bullet-color);
    /* Dark gray color for bullets */
    padding-right: 5px;
 }
@@ -541,7 +570,7 @@ body {
    justify-content: space-between;
    /* Align children to space between */
    background-color: var(--color-palette-1A);
-   border: 1px solid var(--first-border-color);
+   border: 1px solid var(--border-color-1);
    padding: 15px;
    border-radius: 8px;
    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
@@ -562,7 +591,7 @@ body {
    /* Optional: rounds the corners of the image */
    margin-bottom: 10px;
    /* Space between the image and text content */
-   border: 1px solid #ccc;
+   border: 1px solid var(--border-color-1);
 }
 
 .project-link {
@@ -621,11 +650,8 @@ body {
 
 .form-submit-button {
    display: block;
-   /* Makes the button a block element */
    margin: 20px auto;
-   /* Centers the button horizontally */
    width: 150px;
-   /* You can adjust the width as needed */
 }
 
 #thankYouModal {
@@ -633,18 +659,25 @@ body {
    /* Hidden by default */
    position: fixed;
    /* Stay in place */
-   z-index: 1;
+   z-index: 2000;
    /* Sit on top */
-   left: 0;
-   top: 0;
-   width: 100%;
-   /* Full width */
-   height: 100%;
-   /* Full height */
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: 300px;
+   /* Fixed width */
+   max-width: 100%;
+   /* Prevents exceeding viewport size */
+   padding: 20px;
    overflow: auto;
    /* Enable scroll if needed */
-   background-color: rgb(0, 0, 0, 0.4);
-   /* Black w/ opacity */
+   color: var(--color-palette-1E);
+   /* TEXT */
+   background-color: var(--color-palette-1A);
+   /* BACKGROUND */
+   border: 1px solid var(--border-color-1);
+   /* BORDER */
+   border-radius: 10px;
 }
 
 /* CONTACT PAGE STYLING */
@@ -669,7 +702,7 @@ body {
    .logo_image {
       width: 100%;
       height: auto;
-      background-color: black;
+      background-color: var(--color-palette-1E);
       margin-bottom: 20px;
       /* Space between logo and navigation */
    }
@@ -856,7 +889,7 @@ body {
    width: auto;
    margin-top: -22px;
    padding: 16px;
-   color: white;
+   color: var(--color-palette-1A);
    font-weight: bold;
    font-size: 18px;
    transition: 0.6s ease;
@@ -873,12 +906,12 @@ body {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-   background-color: rgba(0, 0, 0, 0.8);
+   background-color: var(--slideshow-background);
 }
 
 /* Caption text */
 .text {
-   color: #f2f2f2;
+   color: var(--slideshow-caption-text);
    font-size: 15px;
    padding: 8px 12px;
    position: absolute;
@@ -889,7 +922,7 @@ body {
 
 /* Number text (1/3 etc) */
 .numbertext {
-   color: #f2f2f2;
+   color: var(--slideshow-caption-text);
    font-size: 12px;
    padding: 8px 12px;
    position: absolute;
@@ -902,7 +935,7 @@ body {
    height: 15px;
    width: 15px;
    margin: 0 2px;
-   background-color: #bbb;
+   background-color: var(--slideshow-dot-color);
    border-radius: 50%;
    display: inline-block;
    transition: background-color 0.6s ease;
@@ -910,7 +943,7 @@ body {
 
 .active,
 .dot:hover {
-   background-color: #717171;
+   background-color: var(--slideshow-dot-active-color);
 }
 
 /* Fading animation */
