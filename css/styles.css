@@ -152,7 +152,6 @@ button {
    background-color: var(--button-background);
    color: var(--button-text);
    text-decoration: none;
-   padding: 10px;
    border-width: 1px;
    border-radius: 20px;
    transition-duration: 0.2s;
@@ -410,7 +409,7 @@ body {
 }
 
 .nav_button {
-   margin: 10px;
+   margin: 0 10px;
    border-radius: 20px;
    padding: 10px;
 }
