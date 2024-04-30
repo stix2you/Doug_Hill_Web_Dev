@@ -56,7 +56,7 @@ EXCEPT box shadows due to the complexity of the shadow property and the need for
    --animation-color-four: green;
    --animation-color-five: blue;
    --animation-color-six: purple;
-
+   
    /* TOGGLE COLORS */
    --toggle-background: #222;
    --toggle-active-background: #fff;
@@ -437,8 +437,8 @@ body {
       fill: var(--animation-color-one);
    }
 
-   10% {
-      fill: var(--animation-color-two);
+   10% {  
+      fill: var(--animation-color-two);  
    }
 
    30% {
@@ -465,6 +465,7 @@ body {
 .skyline {
    animation: 10s color-change infinite normal linear;
 }
+
 /* INDEX PAGE STYLING */
 
 
