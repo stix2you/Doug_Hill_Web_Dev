@@ -27,7 +27,7 @@ function updateColor() {
    
    document.documentElement.style.setProperty(colorVariables[currentIndex], randomColor);  // Set the color to the root element
    currentIndex = (currentIndex + 1) % colorVariables.length;                             // Move to the next color variable in the root element
-   setTimeout(updateColor, 2000);                                                     // Call the function again after 2 seconds   
+   setTimeout(updateColor, 30000);                                                     // Call the function again after 2 seconds   
 }
 
 updateColor();  // Start the cycle of updating colors
