@@ -642,27 +642,18 @@ body {
 
 #thankYouModal {
    display: none;
-   /* Hidden by default */
    position: fixed;
-   /* Stay in place */
    z-index: 2000;
-   /* Sit on top */
    left: 50%;
    top: 50%;
    transform: translate(-50%, -50%);
    width: 300px;
-   /* Fixed width */
    max-width: 100%;
-   /* Prevents exceeding viewport size */
    padding: 20px;
    overflow: auto;
-   /* Enable scroll if needed */
    color: var(--color-palette-1E);
-   /* TEXT */
    background-color: var(--color-palette-1A);
-   /* BACKGROUND */
    border: 1px solid var(--border-color-1);
-   /* BORDER */
    border-radius: 10px;
 }
 

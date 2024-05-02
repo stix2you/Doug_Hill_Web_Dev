@@ -18,7 +18,8 @@
 
    <header class="page-header">
       <!--LOGO UPPER LEFT-->
-      <img onclick="window.location.href='index.html';" src="img/logo.png" class="logo_image" alt="Doug Hill Web Developer logo">
+      <img onclick="window.location.href='index.html';" src="img/logo.png" class="logo_image"
+         alt="Doug Hill Web Developer logo">
       <!--MENU BAR-->
       <nav class="page-header__item special">
          <ul role="menubar" class="navigation-list">
@@ -33,7 +34,8 @@
                <a href="work.html" class="navigation-list__item" role="menuitem">Work</a>
             </li>
             <li role="presentation">
-               <a href="contact.html" class="navigation-list__item navigation-list__item--active" role="menuitem">Contact</a>
+               <a href="contact.html" class="navigation-list__item navigation-list__item--active"
+                  role="menuitem">Contact</a>
             </li>
          </ul>
       </nav>
@@ -71,8 +73,11 @@
             <label class="standard-label" for="contact-phone">Telephone: </label>
             <input type="tel" name="tel" placeholder="Your Phone Number" id="contact-phone" required
                pattern="\d{3}[\-]\d{3}[\-]\d{4}">
-
-            <br><br>
+            <!-- Checkbox for Non-US number, NOTE: id="non-us" is used in script file to toggle removal of "pattern" attribute -->
+            <div style="margin: 10px 0;">
+               <input type="checkbox" id="non-us" name="non-us">
+               <label for="non-us">Non-US Phone Number</label>
+            </div>
             <label class="standard-label" for="contact-message">Message: </label>
             <textarea name="message" placeholder="Your Message" id="contact-message" required cols="30"
                rows="5"></textarea>
