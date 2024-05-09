@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Doug Hill Portfolio</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Young+Serif&display=swap">
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+   <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+
+   <header class="page-header">
+      <!--LOGO UPPER LEFT-->
+      <img onclick="window.location.href='index.html';" src="img/logo.png" class="logo_image"
+         alt="Doug Hill Web Developer logo">
+      <!--MENU BAR-->
+      <nav class="page-header__item special">
+         <ul role="menubar" class="navigation-list">
+            <li role="presentation">
+               <a href="index.html" class="navigation-list__item" role="menuitem">Home</a>
+            </li>
+            <li role="presentation">
+               <a href="about.html" class="navigation-list__item" role="menuitem"
+                  aria-label="Information about me">About</a>
+            </li>
+            <li role="presentation">
+               <a href="work.html" class="navigation-list__item navigation-list__item--active" role="menuitem">Work</a>
+            </li>
+            <li role="presentation">
+               <a href="contact.html" class="navigation-list__item" role="menuitem">Contact</a>
+            </li>
+         </ul>
+      </nav>
+      <!-- LIGHT/DARK THEME TOGGLE BUTTON -->
+      <div class="light_dark_label">Dark/Light</div>
+      <div id="toggle" class="theme-toggle active" onclick="toggleTheme()">
+         <i class="indicator"></i>
+      </div>
+   </header>
+
+   <!-- Case-Study Listing-->
+   <main class="case-study">
+      <h1>ChatApp Project Case Study</h1>
+      <p class="case-study-intro">
+         The ChatApp is a mobile app which provides users with a very basic CHAT interface, and options to share images and their location. It features Asynchronous offline storate on the client side, and a real-time Firebase/Firestore database on the server side. The app is built using React Native, Expo, and Google Firestore.
+      </p>
+      <ul class="case-study-timeline">
+         <li class="case-study-item" style="--accent-color:#41516C">
+            <div class="date">Technologies Used:</div>
+            <div class="title"></div>
+            <!-- <img src="img/Pokedex.png" class="case-study-image"> -->
+            <div class="descr">
+               HTML5 
+               CSS
+               JavaScript (ES6+)
+               jQuery
+               AJAX
+               Bootstrap
+               PokeAPI
+               IIFE (Immediately Invoked Function Expression)
+            </div>
+         </li>
+         <li class="case-study-item" style="--accent-color:#FBCA3E">
+            <div class="date">Initial Setup</div>
+            <div class="title">HTML and CSS</div>
+            <div class="descr">
+               The initial setup focused on creating a basic HTML structure that incorporates the necessary Bootstrap styles and custom CSS. I used a fixed-top navigation bar with the Pokédex logo and a responsive Pokémon list section. The UI leverages CSS and Bootstrap for responsive design, custom styles and theme consistency.
+            </div>
+         </li>
+         <li class="case-study-item" style="--accent-color:#E24A68">
+            <div class="date">Implementing JavaScript Logic</div>
+            <div class="title">Module Pattern with IIFE</div>
+            <div class="descr">
+               I encapsulated all JavaScript logic in an IIFE to avoid polluting the global scope. The pokemonRepository object serves as the primary interface for interacting with Pokémon data.
+            </div>
+         </li>
+         <li class="case-study-item" style="--accent-color:#1B5F8C">
+            <div class="date">2017</div>
+            <div class="title">Title 4</div>
+            <div class="descr">
+               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.
+            </div>
+         </li>
+         <li class="case-study-item" style="--accent-color:#4CADAD">
+            <div class="date">2022</div>
+            <div class="title">Title 5</div>
+            <div class="descr">
+               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.
+            </div>
+         </li>
+      </ul>
+   </main>
+
+
+   <footer class="page_footer">
+      <p class="footer_text">Find me on</p>
+      <div class="social-media">
+         <a href="https://github.com/stix2you" class="social-media__link" target="_blank">
+            <img src="img/github_icon.svg" class="social-media__img" alt="github logo">
+         </a>
+         <!-- LinkedIn link -->
+         <a href="https://www.linkedin.com/in/doug-hill-8b7634288/" class="social-media__link" target="_blank">
+            <img src="img/linkedin_icon.svg" class="social-media__img" alt="linkedin logo">
+         </a>
+      </div>
+   </footer>
+
+   <!--tota11y accessibility checker
+    <script src="js/tota11y.min.js"></script> -->
+   <script src="js/theme-toggle.js"></script>
+</body>
+
+</html>
