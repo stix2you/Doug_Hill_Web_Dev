@@ -27,6 +27,7 @@ EXCEPT box shadows due to the complexity of the shadow property and the need for
    --font-size-large: 30px;
    --font-size-medium-large: 24px;
    --font-size-medium: 18px;
+   --font-size-medium-small: 16px;
    --font-size-small: 10px;
    --font-weight-bold: 700;
    --font-weight-normal: 400;
@@ -849,6 +850,10 @@ body {
 
 
 
+
+
+
+
 /* CASE STUDY STYLES */
 .case-study {
    text-align: center;
@@ -860,6 +865,67 @@ body {
 .case-study h1 {
    text-align: center;
 }
+
+/* Styling each list item in the ordered list */
+.case-study-card>li {
+   list-style: none;
+   background-color: var(--color-palette-1A);
+   border: 1px solid var(--border-color-1);
+   padding: 15px 20px;
+   border-radius: 8px;
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+   font-size: var(--font-size-medium);
+   font-weight: var(--font-weight-light);
+   color: var(--color-palette-1E);
+   margin: 20px;
+}
+
+.case-study-card h1 {
+   font-size: var(--font-size-very-large);
+   color: var(--color-palette-1E);
+}
+
+.case-study-card h2 {
+   font-size: var(--font-size-large);
+   color: var(--color-palette-1E);
+}
+
+.case-study-card h3 {
+   font-size: var(--font-size-medium-large);
+   color: var(--color-palette-1E);
+}
+
+/* Styling nested unordered lists */
+.case-study-card ul {
+   padding-left: 20px;
+   list-style-type: none;
+   font-size: 0.8em;
+   color: var(--color-palette-1D);
+}
+
+/* Styling list items in nested lists */
+.case-study-card ul li {
+   margin-bottom: 5px;
+}
+
+/* Styling bullets for nested list items with a custom character */
+.case-study-card ul li:before {
+   content: "— ";
+   /* En dash for a bullet point look */
+   color: var(--bullet-color);
+   /* Dark gray color for bullets */
+   padding-right: 5px;
+}
+
+/* Styling for the lists within the case study cards */
+.case-study-card_list {
+   text-align: left;
+   padding: 0 40px;
+   margin: 0 40px;
+   font-size: var(--font-size-medium-small);
+   font-weight: var(--font-weight-normal);
+}
+
 
 .case-study-timeline {
    --col-gap: 2rem;
@@ -1032,3 +1098,5 @@ body {
       border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
    }
 }
+
+/* CASE STUDY STYLES */
