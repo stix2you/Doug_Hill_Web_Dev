@@ -359,7 +359,7 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
-   margin-bottom: 20px;
+   margin-bottom: 5px;
 }
 
 .profile {
@@ -412,7 +412,7 @@ body {
 }
 
 .nav_button {
-   margin: 0 10px;
+   margin: 10px 10px;
    border-radius: 20px;
    padding: 10px;
 }
@@ -602,7 +602,7 @@ body {
    /* Makes the button a block element to fill the button container */
    text-align: center;
    /* Center the text inside the button */
-   margin: 5px auto;
+   margin: 10px auto;
    /* Centers the button horizontally and adds vertical margin */
    color: var(--color-palette-1A);
    text-decoration: none;
