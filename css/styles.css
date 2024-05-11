@@ -882,7 +882,7 @@ body {
 
 .case-study-card-image-left {
    display: grid;
-   grid-template-columns: auto 1fr; /* Adjusts the column widths so the image has its natural width and the text fills the rest */
+   grid-template-columns: 1fr 1fr; /* Adjusts the column widths so the image has its natural width and the text fills the rest */
    gap: 20px; /* Space between image and text */
    align-items: center; /* Vertically centers the content in the grid */
    padding: 20px; /* Padding inside the list item */
@@ -894,7 +894,7 @@ body {
 
 .case-study-card-image-right {
    display: grid;
-   grid-template-columns: 1fr auto; /* Adjusts the column widths so the text fills the left side and the image has its natural width */
+   grid-template-columns: 1fr 1fr; /* Adjusts the column widths so the text fills the left side and the image has its natural width */
    gap: 20px; /* Space between image and text */
    align-items: center; /* Vertically centers the content in the grid */
    padding: 20px; /* Padding inside the list item */
@@ -902,6 +902,12 @@ body {
    border: 1px solid var(--border-color-1); /* Border properties as defined */
    border-radius: 10px; /* Rounded corners */
    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Shadow for some depth */
+}
+
+.case-study-image {
+   width: 100%; /* Ensures the image fills the card width */
+   border-radius: 10px; /* Optional: rounds the corners of the image */
+   border: 2px solid var(--border-color-1); /* Border properties as defined */
 }
 
 .case-study-intro {
@@ -954,7 +960,6 @@ body {
    font-size: var(--font-size-medium-small);
    font-weight: var(--font-weight-normal);
 }
-
 
 .case-study-card-tech-stack-container {
    display: grid;
@@ -1016,17 +1021,11 @@ body {
    /* Expo text */
 }
 
-
-
-
-
-
-
-
+/* TIMELINE STYLING */
 .case-study-timeline {
-   --col-gap: 2rem;
+   --col-gap: 2rem; 
    --row-gap: 4rem;
-   --line-w: 0.25rem;
+   --line-w: 0.3rem;
    display: grid;
    grid-template-columns: var(--line-w) 1fr;
    grid-auto-columns: max-content;
@@ -1041,7 +1040,7 @@ body {
    content: "";
    grid-column: 1;
    grid-row: 1 / span 20;
-   background: rgb(225, 225, 225);
+   background: var(--color-palette-1D);
    border-radius: calc(var(--line-w) / 2);
 }
 
@@ -1053,11 +1052,11 @@ body {
 /* Card */
 .case-study-item {
    grid-column: 2;
-   --inlineP: 1.5rem;
-   margin-inline: var(--inlineP);
+   --inlineP: 3rem; 
    grid-row: span 2;
    display: grid;
    grid-template-rows: min-content min-content min-content;
+
 }
 
 /* Date */
@@ -1065,48 +1064,16 @@ body {
    --dateH: 3rem;
    height: var(--dateH);
    margin-inline: calc(var(--inlineP) * -1);
-
    text-align: center;
-   background-color: var(--accent-color);
-
-   color: white;
+   background-color: var(--button-background);
+   color: var(--button-text);
    font-size: 1.25rem;
    font-weight: 700;
-
+   border: 0.25rem solid var(--color-palette-1D);
    display: grid;
    place-content: center;
    position: relative;
-
-   border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
-}
-
-/* Date Flap */
-.case-study-item .date::before {
-   content: "";
-   width: var(--inlineP);
-   aspect-ratio: 1;
-   background: var(--accent-color);
-   background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
-   position: absolute;
-   top: 100%;
-
-   clip-path: polygon(0 0, 100% 0, 0 100%);
-   right: 0;
-}
-
-/* Circle */
-.case-study-item .date::after {
-   content: "";
-   position: absolute;
-   width: 2rem;
-   aspect-ratio: 1;
-   background: var(--bgColor);
-   border: 0.3rem solid var(--accent-color);
-   border-radius: 50%;
-   top: 50%;
-
-   transform: translate(50%, -50%);
-   right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+   border-radius: 0px 50px 50px 0px;
 }
 
 /* Title and Description */
@@ -1129,20 +1096,6 @@ body {
    font-weight: 300;
 }
 
-/* Shadows */
-.case-study-item .title::before,
-.case-study-item .descr::before {
-   content: "";
-   position: absolute;
-   width: 90%;
-   height: 0.5rem;
-   background: rgba(0, 0, 0, 0.5);
-   left: 50%;
-   border-radius: 50%;
-   filter: blur(4px);
-   transform: translate(-50%, 50%);
-}
-
 .case-study-item .title::before {
    bottom: calc(100% + 0.125rem);
 }
@@ -1152,10 +1105,26 @@ body {
    bottom: 0.25rem;
 }
 
-.case-study-image {
-   width: 400px;
+.descr {
+   align-items: center;
+   padding: 20px;
+}  
+
+.case-study-timeline-image {
+   width: 100%;
    height: auto;
    cursor: pointer;
+   border-radius: 10px;
+   margin-top: 30px;
+   border: 2px solid var(--border-color-1);
+}
+
+.case-study-timeline-image-gif {
+   width: auto;
+   height: 400px;
+   cursor: pointer;
+   border-radius: 10px;
+   margin-top: 30px;
 }
 
 /* Responsive Layout */
@@ -1191,8 +1160,14 @@ body {
    }
 
    .case-study-item:nth-child(odd) .date {
-      border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+      border-radius: 50px 0px 0px 50px;
    }
+
+   /* remove margin-bottom from the last child */
+
+   .case-study-item:nth-child(5) .descr {
+      margin-bottom: 0px;
+   }  
 }
 
 /* CASE STUDY STYLES */

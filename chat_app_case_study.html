@@ -67,7 +67,6 @@
                      while online.
                   </p>
                </div>
-
             </li>
             <li class="case-study-card-image-right">
                <div>
@@ -176,102 +175,128 @@
          </ol>
          <br>
          <br>
-         <h1>Developent Process</h1>
+         <h1>Development Process</h1>
          <br>
          <ul class="case-study-timeline">
-            <li class="case-study-item" style="--accent-color:#41516C">
-               <div class="date">Development Environment</div>
-               <div class="title">React Native and Expo</div>
+            <li class="case-study-item">
+               <div class="date">Project Setup</div>
                <div class="descr">
-                  The first step in creating the ChatApp was setting up the development environment with React Native
-                  and Expo.<br><br> I structured the app by creating two key components: Start.js for the
-                  start screen and Chat.js for the chat screen. <br><br>With navigation handled by React Navigation, I
-                  implemented
-                  user input and background color customization before testing the basic functionality on both Android
-                  and
-                  iOS. <br><br>The project was then committed to GitHub and recorded for documentation purposes.
+                  <div>
+                     Using the Project Brief as a guide, I set up my Chat App project with React Native via Expo,
+                     created
+                     its layout, and styled it.
+                  </div>
+                  <img src="img/chatapp-start-screen.png" class="case-study-timeline-image" alt="ChatApp Start Screen">
+                  <div><br>I structured the app by creating two key components: Start.js for the
+                     start screen and Chat.js for the chat screen. <br><br>With navigation handled by React Navigation,
+                     I
+                     implemented a form so the user could enter their name, background color customization, and a "start
+                     chatting" button, and then tested the basic functionality on both Android
+                     and iOS. <br><br>The project was then committed to GitHub and recorded for documentation purposes.
+                  </div>
                </div>
             </li>
-            <li class="case-study-item" style="--accent-color:#FBCA3E">
+            <li class="case-study-item">
                <div class="date">Integrating Gifted Chat Library</div>
-               <div class="title"></div>
                <div class="descr">
-                  The second step involved incorporating the Gifted Chat library into the chat screen. I imported and
-                  rendered a GiftedChat component in Chat.js, managing the messages state with useState() and adding
-                  initial static messages via useEffect(). <br><br>To ensure a smooth user experience, I used
-                  KeyboardAvoidingView
-                  for both Android and iOS, preventing the keyboard from covering the input field. <br><br>After
-                  thoroughly
-                  commenting on the code, I updated the GitHub repository to document the progress.
+                  <div>
+                     To render the Chat screen and create basic functionality, I first
+                     installed, then imported and
+                     rendered, a GiftedChat component in Chat.js. I managed the messages state with useState() and added
+                     initial static messages via useEffect().
+                  </div>
+                  <img src="img/useEffect-static-message.png" class="case-study-timeline-image" alt="useEffect Static Message">
+                  <div>To ensure a smooth user experience, I used
+                     KeyboardAvoidingView
+                     for both Android and iOS, preventing the keyboard from covering the input field. <br><br>After
+                     thoroughly
+                     commenting on the code, I updated the GitHub repository to document the progress.
+                  </div>
                </div>
             </li>
-            <li class="case-study-item" style="--accent-color:#E24A68">
+            <li class="case-study-item">
                <div class="date">Integrating Firebase and Firestore</div>
-               <div class="title"></div>
                <div class="descr">
-                  The next step was to integrate Firebase and Firestore for authentication and message storage. I
-                  created a
-                  new Firestore database, updated its read and write rules, and enabled anonymous sign-in. <br><br>After
-                  installing
-                  firebase, I initialized Firebase and Firestore in App.js, passing the database object to the
-                  chat
-                  component.
-                  In Start.js, I implemented anonymous user login with signInAnonymously(), passing the user ID, name,
-                  and
-                  background color to the chat screen upon successful login. <br><br>In Chat.js, I used the Firestore
-                  onSnapshot()
-                  listener to fetch messages in real-time, ensuring messages were sorted by createdAt in descending
-                  order.
-                  I updated the onSend() function to save new messages directly to Firestore using addDoc().
-                  <br><br>Again, I pushed everything to GitHub, then tested and recorded the app's behavior for
-                  documentation.
+                  <div>
+                     I integrated Firebase and Firestore for authentication and message storage. I
+                     created a
+                     new Firestore database, updated its read and write rules, and enabled anonymous sign-in.
+                     <br><br>After
+                     installing
+                     firebase, I initialized Firebase and Firestore in App.js, passing the database object to the
+                     chat
+                     component.
+                     In Start.js, I implemented anonymous user login with signInAnonymously(), passing the user ID,
+                     name,
+                     and
+                     background color to the chat screen upon successful login. <br><br>In Chat.js, I used the Firestore
+                     onSnapshot()
+                     listener to fetch messages in real-time, ensuring messages were sorted by createdAt in descending
+                     order.
+                     I updated the onSend() function to save new messages directly to Firestore using addDoc().
+                  </div>
+                  <img src="img/firebase-db.png" class="case-study-timeline-image" alt="Firebase Database">
+                  <div>Again, I pushed everything to GitHub, then tested and recorded the app's behavior for
+                     documentation.
+                  </div>
                </div>
             </li>
-            <li class="case-study-item" style="--accent-color:#1B5F8C">
+            <li class="case-study-item">
                <div class="date">Real-Time Network Connectivity</div>
-               <div class="title"></div>
                <div class="descr">
-                  The next step in the process was implementing a real-time network connectivity detection system and
-                  managing offline message storage. Using useNetInfo() to monitor network status, I wrote functions to
-                  toggle network status and passed that information in a prop to Chat.js, allowing the chat screen to
-                  adapt its data source
-                  based on connectivity.
-                  <br><br>In Chat.js, messages were fetched from Firestore if the connection was present, and local
-                  storage if not. Additionally, the input toolbar was disabled in offline mode to prevent users from
-                  composing messages or sending images.
+                  <div>
+                     The next step in the process was implementing a real-time network connectivity detection system and
+                     managing offline message storage. Using useNetInfo() to monitor network status, I wrote functions
+                     to
+                     toggle network status and passed that information in a prop to Chat.js, allowing the chat screen to
+                     adapt its data source
+                     based on connectivity.
+                     <br><br>In Chat.js, messages were fetched from Firestore if the connection was present, and local
+                     storage if not. Additionally, the input toolbar was disabled in offline mode to prevent users from
+                     composing messages or sending images.
 
-                  <br><br>Testing the app in both online and offline modes was crucial to ensure seamless functionality.
-                  Expo and Android Studio, as well a several handheld devices, were used in this phase to ensure
-                  functionality. <br><br>Finally, I documented the
-                  project, updated the GitHub repository, and recorded a demonstration showcasing the app's behavior in
-                  offline mode. The recording illustrated message retrieval from AsyncStorage and the absence of the
-                  input
-                  toolbar, effectively demonstrating the implemented offline functionality.
-
+                     <br><br>Testing the app in both online and offline modes was crucial to ensure seamless
+                     functionality.
+                     Expo and Android Studio, as well a several handheld devices, were used in this phase to ensure
+                     functionality. <br><br>Finally, I documented the
+                     project, updated the GitHub repository, and recorded a demonstration showcasing the app's behavior
+                     in
+                     offline mode. The recording illustrated message retrieval from AsyncStorage and the absence of the
+                     input toolbar, effectively demonstrating the implemented offline functionality. Android Studio was
+                     used
+                     in part to test functionality, and also to record tests for documentation.
+                  </div>
+                  <img src="img/chatapp-testing1.gif" class="case-study-timeline-image-gif" alt="ChatApp Testing">
                </div>
-            <li class="case-study-item" style="--accent-color:#4CADAD">
+            <li class="case-study-item">
                <div class="date">Advanced Features and Documentation</div>
-               <div class="title"></div>
                <div class="descr">
-                  The final stage of the ChatApp project focused on implementing advanced communication features and
-                  refining the documentation. <br><br>I enhanced the chat screen by adding a button that opened a custom
-                  action
-                  sheet, allowing users to select an image from the library, take a photo, or share their current
-                  location.
-                  By connecting the app to Firebase Storage, images and location data could be securely uploaded and
-                  retrieved.
-                  <br><br>I created the custom action sheet through a new CustomActions.js component, integrated with
-                  GiftedChat
-                  to
-                  handle image picking, camera usage, and geolocation sharing. I also customized the chat's message
-                  bubbles
-                  to display maps for location messages.
-                  <br><br>After thoroughly testing these features and ensuring accessibility, I updated the GitHub
-                  repository
-                  and
-                  documented the app's setup in a comprehensive README.md file. The documentation included step-by-step
-                  instructions for setting up the development environment, configuring the database, and installing
-                  necessary libraries.
+                  <div>
+                     The final stage of the ChatApp project focused on implementing advanced communication features and
+                     refining the documentation. <br><br>I enhanced the chat screen by adding a button that opened a
+                     custom
+                     action
+                     sheet, allowing users to select an image from the library, take a photo, or share their current
+                     location.
+                     By connecting the app to Firebase Storage, images and location data could be securely uploaded and
+                     retrieved.
+                     <br><br>I created the custom action sheet through a new CustomActions.js component, integrated with
+                     GiftedChat
+                     to
+                     handle image picking, camera usage, and geolocation sharing. I also customized the chat's message
+                     bubbles
+                     to display maps for location messages.
+                  </div>
+                  <img src="img/custom-actions-function.png" class="case-study-timeline-image" alt="Custom Actions Function">
+                  <div>
+                     <br><br>After thoroughly testing these features and ensuring accessibility, I updated the GitHub
+                     repository
+                     and
+                     documented the app's setup in a comprehensive README.md file. The documentation included
+                     step-by-step
+                     instructions for setting up the development environment, configuring the database, and installing
+                     necessary libraries.
+                  </div>
                </div>
             </li>
          </ul>
@@ -331,6 +356,20 @@
                   lessons into future projects, refining my development workflow and continuing to build intuitive,
                   user-friendly
                   applications.</p>
+            </li>
+         </ol>
+         <ol class="case-study-card">
+            <li>
+               <h1>Credits:</h1>
+               <p>Lead Developer: Doug Hill</p>
+               <p>Tutor: Adam Pagels</p>
+               <p>Mentor: Mahesh Rodrigo</p>
+               <br>
+               <p>Special thanks to the CareerFoundry team for providing the project brief and assets, as well as
+                  invaluable
+                  feedback and support throughout the development process. The project would not have been possible
+                  without
+                  their guidance and expertise.</p>
             </li>
          </ol>
       </div>
