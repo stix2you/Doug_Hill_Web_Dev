@@ -178,8 +178,8 @@
          <h1>Development Process</h1>
          <br>
          <ul class="case-study-timeline">
-            <li class="case-study-item">
-               <div class="date">Project Setup</div>
+            <li class="case-study-timeline-item">
+               <div class="title">Project Setup</div>
                <div class="descr">
                   <div>
                      Using the Project Brief as a guide, I set up my Chat App project with React Native via Expo,
@@ -196,8 +196,8 @@
                   </div>
                </div>
             </li>
-            <li class="case-study-item">
-               <div class="date">Integrating Gifted Chat Library</div>
+            <li class="case-study-timeline-item">
+               <div class="title">Integrating Gifted Chat Library</div>
                <div class="descr">
                   <div>
                      To render the Chat screen and create basic functionality, I first
@@ -205,17 +205,24 @@
                      rendered, a GiftedChat component in Chat.js. I managed the messages state with useState() and added
                      initial static messages via useEffect().
                   </div>
-                  <img src="img/useEffect-static-message.png" class="case-study-timeline-image" alt="useEffect Static Message">
+                  <div id="myImg" class="modal-trigger">
+                     <img src="img/useEffect-static-message.png" class="case-study-timeline-image"
+                        alt="useEffect Static Message">
+                  </div>
                   <div>To ensure a smooth user experience, I used
                      KeyboardAvoidingView
-                     for both Android and iOS, preventing the keyboard from covering the input field. <br><br>After
+                     for both Android and iOS, preventing the keyboard from covering the input field.
+                  </div>
+                  <img src="img/gifted_chat_render.png" class="case-study-timeline-image" alt="Gifted Chat Render">
+                  <div>
+                     <br>After
                      thoroughly
                      commenting on the code, I updated the GitHub repository to document the progress.
                   </div>
                </div>
             </li>
-            <li class="case-study-item">
-               <div class="date">Integrating Firebase and Firestore</div>
+            <li class="case-study-timeline-item">
+               <div class="title">Integrating Firebase and Firestore</div>
                <div class="descr">
                   <div>
                      I integrated Firebase and Firestore for authentication and message storage. I
@@ -241,8 +248,8 @@
                   </div>
                </div>
             </li>
-            <li class="case-study-item">
-               <div class="date">Real-Time Network Connectivity</div>
+            <li class="case-study-timeline-item">
+               <div class="title">Real-Time Network Connectivity</div>
                <div class="descr">
                   <div>
                      The next step in the process was implementing a real-time network connectivity detection system and
@@ -268,8 +275,9 @@
                   </div>
                   <img src="img/chatapp-testing1.gif" class="case-study-timeline-image-gif" alt="ChatApp Testing">
                </div>
-            <li class="case-study-item">
-               <div class="date">Advanced Features and Documentation</div>
+            </li>
+            <li class="case-study-timeline-item">
+               <div class="title">Advanced Features and Documentation</div>
                <div class="descr">
                   <div>
                      The final stage of the ChatApp project focused on implementing advanced communication features and
@@ -287,7 +295,8 @@
                      bubbles
                      to display maps for location messages.
                   </div>
-                  <img src="img/custom-actions-function.png" class="case-study-timeline-image" alt="Custom Actions Function">
+                  <img src="img/custom-actions-function.png" class="case-study-timeline-image"
+                     alt="Custom Actions Function">
                   <div>
                      <br><br>After thoroughly testing these features and ensuring accessibility, I updated the GitHub
                      repository
