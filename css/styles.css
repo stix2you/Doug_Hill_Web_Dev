@@ -777,6 +777,11 @@ width: 300px;
    border-radius: 10px;
 }
 
+.case-study-card button.nav_button {
+   display: block;   /* Makes the button a block-level element */
+   margin: 0 auto 15px auto;   /* Auto margins on both sides to center it horizontally */
+}
+
 .tech-info {
    display: flex;
    flex-direction: column;
