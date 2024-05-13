@@ -11,7 +11,9 @@ STYLING SECTIONS:
 7. Work Page Styling
 8. Contact Page Styling
 9. Case-Study Page Styling
-10. Responsive Styling
+10. Modal Styling
+11. Tooltip on Image Hover Styling
+12. Responsive Styling
 
 NOTE: All colors are managed by variables for consistency and easy tuning 
 EXCEPT box shadows due to the complexity of the shadow property and the need for multiple values to be set. 
@@ -119,51 +121,6 @@ body {
 /* ROOT STYLING */
 
 
-
-/* Tooltip container setup */
-.tooltip {
-   position: relative; /* Context for absolute positioning */
-   display: inline-block; /* Align with other inline elements like images */
- }
- 
- /* Tooltip text setup */
- .tooltip .tooltiptext {
-   visibility: hidden; /* Initially hidden */
-   width: 120px;
-   background-color: black;
-   color: white;
-   text-align: center;
-   border-radius: 6px;
-   padding: 5px 0;
- 
-   /* Positioning the tooltip */
-   position: absolute;
-   z-index: 1000;
-   bottom: 50%;
-   left: 50%;
-   margin-left: -60px; /* Centers the tooltip */
-   opacity: 0;
-   transition: opacity 0.3s;
- }
- 
- .tooltip .tooltiptext::after {
-   content: "";
-   position: absolute;
-   top: 100%;
-   left: 50%;
-   margin-left: -5px;
-   border-width: 5px;
-   border-style: solid;
-   border-color: black transparent transparent transparent;
- }
- 
- .tooltip:hover .tooltiptext {
-   visibility: visible;
-   opacity: 1;
- }
- 
-
-/* ^^^ TOOLTIP ON IMAGE HOVER STYLING ^^^ */
 
 
 
@@ -758,7 +715,6 @@ body {
    padding: 20px;
 }
 
-
 .case-study-card h1 {
    font-size: var(--font-size-very-large);
    color: var(--color-palette-1E);
@@ -823,9 +779,7 @@ body {
 
 .case-study-card button.nav_button {
    display: block;
-   /* Makes the button a block-level element */
    margin: 0 auto 15px auto;
-   /* Auto margins on both sides to center it horizontally */
 }
 
 .tech-info {
@@ -960,11 +914,9 @@ body {
 .modal-content {
    margin: auto;
    display: block;
-   width: auto;
-   height: auto;
-   max-width: 100%;
-   max-height: 80vh;
-}
+   width: auto; 
+   height: auto; 
+ }
 
 .close {
    position: absolute;
@@ -999,9 +951,52 @@ body {
 
 
 
+/* TOOLTIP ON IMAGE HOVER STYLING */
+/* Tooltip container setup */
+.tooltip {
+   position: relative; /* Context for absolute positioning */
+   display: inline-block; /* Align with other inline elements like images */
+ }
+ 
+ /* Tooltip text setup */
+ .tooltip .tooltiptext {
+   visibility: hidden; /* Initially hidden */
+   width: 120px;
+   background-color: black;
+   color: white;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+   /* Positioning the tooltip */
+   position: absolute;
+   z-index: 1000;
+   bottom: 50%;
+   left: 50%;
+   margin-left: -60px; /* Centers the tooltip */
+   opacity: 0;
+   transition: opacity 0.3s;
+ }
+ 
+ .tooltip .tooltiptext::after {
+   content: "";
+   position: absolute;
+   top: 100%;
+   left: 50%;
+   margin-left: -5px;
+   border-width: 5px;
+   border-style: solid;
+   border-color: black transparent transparent transparent;
+ }
+ 
+ .tooltip:hover .tooltiptext {
+   visibility: visible;
+   opacity: 1;
+ }
+ /* ^^^ TOOLTIP ON IMAGE HOVER STYLING ^^^ */
 
 
 
+/* RESPONSIVE STYLING */
 /* Responsive styling for case-study only*/
 @media (max-width: 600px) {
    .case-study-timeline-item .title {
