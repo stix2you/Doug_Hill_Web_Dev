@@ -186,7 +186,10 @@
                      created
                      its layout, and styled it.
                   </div>
-                  <img src="img/chatapp-start-screen.png" class="case-study-timeline-image" alt="ChatApp Start Screen">
+                  <div id="myImg" class="modal-trigger">
+                     <img src="img/chatapp-start-screen.png" class="case-study-timeline-image"
+                        alt="ChatApp Start Screen">
+                  </div>
                   <div><br>I structured the app by creating two key components: Start.js for the
                      start screen and Chat.js for the chat screen. <br><br>With navigation handled by React Navigation,
                      I
@@ -213,7 +216,9 @@
                      KeyboardAvoidingView
                      for both Android and iOS, preventing the keyboard from covering the input field.
                   </div>
-                  <img src="img/gifted_chat_render.png" class="case-study-timeline-image" alt="Gifted Chat Render">
+                  <div id="myImg" class="modal-trigger">
+                     <img src="img/gifted_chat_render.png" class="case-study-timeline-image" alt="Gifted Chat Render">
+                  </div>
                   <div>
                      <br>After
                      thoroughly
@@ -242,7 +247,9 @@
                      order.
                      I updated the onSend() function to save new messages directly to Firestore using addDoc().
                   </div>
-                  <img src="img/firebase-db.png" class="case-study-timeline-image" alt="Firebase Database">
+                  <div id="myImg" class="modal-trigger">
+                     <img src="img/firebase-db.png" class="case-study-timeline-image" alt="Firebase Database">
+                  </div>
                   <div>Again, I pushed everything to GitHub, then tested and recorded the app's behavior for
                      documentation.
                   </div>
@@ -273,7 +280,9 @@
                      used
                      in part to test functionality, and also to record tests for documentation.
                   </div>
-                  <img src="img/chatapp-testing1.gif" class="case-study-timeline-image-gif" alt="ChatApp Testing">
+                  <div id="myImg" class="modal-trigger">
+                     <img src="img/chatapp-testing1.gif" class="case-study-timeline-image-gif" alt="ChatApp Testing">
+                  </div>
                </div>
             </li>
             <li class="case-study-timeline-item">
@@ -295,8 +304,10 @@
                      bubbles
                      to display maps for location messages.
                   </div>
-                  <img src="img/custom-actions-function.png" class="case-study-timeline-image"
-                     alt="Custom Actions Function">
+                  <div id="myImg" class="modal-trigger">
+                     <img src="img/custom-actions-function.png" class="case-study-timeline-image"
+                        alt="Custom Actions Function">
+                  </div>
                   <div>
                      <br><br>After thoroughly testing these features and ensuring accessibility, I updated the GitHub
                      repository
@@ -379,10 +390,19 @@
                   feedback and support throughout the development process. The project would not have been possible
                   without
                   their guidance and expertise.</p>
-               <button type="button" class="nav_button" onclick="window.location.href='work.html';">Back to My Projects</button>
-               <button type="button" class="nav_button" onclick="window.location.href='index.html';">Back to Home</button>
+               <button type="button" class="nav_button" onclick="window.location.href='work.html';">Back to My
+                  Projects</button>
+               <button type="button" class="nav_button" onclick="window.location.href='index.html';">Back to
+                  Home</button>
             </li>
          </ol>
+      </div>
+
+      <!-- Modal Structure for image expansion modals in timeline -->
+      <div id="myModal" class="modal">
+         <span class="close">&times;</span>
+         <img class="modal-content" id="img01">
+         <div id="caption"></div>
       </div>
    </main>
 
@@ -403,6 +423,7 @@
    <!--tota11y accessibility checker
     <script src="js/tota11y.min.js"></script> -->
    <script src="js/theme-toggle.js"></script>
+   <script src="js/modal.js"></script>
 </body>
 
 </html>
