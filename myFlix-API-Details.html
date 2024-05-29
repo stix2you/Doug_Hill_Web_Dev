@@ -49,53 +49,52 @@
    <main>
 
       <div class="case-study">
-         <h1>myFlix Angular Project</h1>
+         <h1>myFlix API Project</h1>
          <ol class="case-study-card">
             <li class="case-study-card-image-left">
                <img src="img/ChatApp.png" class="case-study-image" alt="ChatApp screenshot">
                <div>
                   <h2>Overview</h2>
                   <p>
-                     MyFlix Angular is a single-page web application that allows users to browse movies, view details,
-                     and manage their favorite movies. The application was developed as part of the CareerFoundry
-                     Full-Stack
-                     Web Development course, demonstrating proficiency in building Angular applications with a Node.js
-                     development backend. The project brief included specific requirements for the UI, user
-                     authentication, and data management, which were implemented using Angular components, services,
-                     and routing.
+                     MyFlix API is a RESTful web service that provides movie data to the MyFlix Angular application.
+                     The API is built using Node.js, Express.js, and MongoDB, and it allows users to access information
+                     about movies, directors, and genres. The API supports user authentication, enabling users to
+                     register, log in, and manage their favorites list. By interacting with the MyFlix API, the
+                     MyFlix Angular application can display a list of movies, allow users to view movie details,
+                     and manage their favorites.
                   </p>
                </div>
             </li>
             <li class="case-study-card-image-right">
                <div>
                   <h2>Purpose & Context</h2>
-                  <p>Movie streaming platforms have become increasingly popular, offering users a vast library of films
-                     and TV shows to enjoy. MyFlix Angular was designed to provide a encyclopedic, user-friendly
-                     interface for
-                     browsing movies, viewing details, and managing favorites. The application serves as a showcase of
-                     Angular development skills, demonstrating the ability to create responsive, interactive web
-                     applications with dynamic content and user authentication.</p>
+                  <p>The need to build a RESTful web service that provides movie data to the MyFlix Angular and React
+                     applications arose from the desire to learn how to create a responsive, interactive web application
+                     that allows users to browse, search, and manage movie information. By developing the MyFlix API,
+                     I was able to demonstrate my proficiency in back-end development, user authentication, and data
+                     management. The API serves as the foundation for the MyFlix Angular application, enabling users to
+                     access movie data and personalize their viewing experience.</p>
+
+                  </p>
                </div>
                <img src="img/Popular-chat-screens.png" class="case-study-image" alt="Popuare Chat Screens Example">
             </li>
             <li>
                <h2>Objective</h2>
-               <p>The goal of the MyFlix Angular project was to build a responsive, interactive web application that
-                  allows users to:</p>
+               <p>The goal of the MyFlix
+                  API project was to create a RESTful web service that provides movie data to the MyFlix Angular
+                  application. The API needed to support user authentication, enabling users to register, log in, and
+                  manage their favorites list. By interacting with the MyFlix API, the MyFlix Angular application can
+                  display a list of movies, allow users to view movie details, and manage their favorites. The API
+                  needed to be secure, scalable, and efficient, supporting CRUD operations for movie data and user
+                  authentication.</p>
+               </p>
                <ul>
-                  <li class="case-study-card_list"><strong>Browse Movies</strong>: View a list of movies with
-                     corresponding images and descriptions.</li>
-                  <li class="case-study-card_list"><strong>View Movie Details</strong>: Access detailed information
-                     about each movie, including the director, genre, and release date.</li>
-                  <li class="case-study-card_list"><strong>Manage Favorites</strong>: Add and remove movies from a
-                     personal favorites list.</li>
-                  <li class="case-study-card_list"><strong>Search Movies</strong>: Search for movies by title or genre
-                     using a search bar.</li>
-                  <li class="case-study-card_list"><strong>Authenticate Users</strong>: Allow users to register, log in,
-                     and log out to access personalized features.</li>
-                  <li class="case-study-card_list"><strong>Angular, RXJS, and Typescript</strong>: Specifically
-                     demonstrate the
-                     advantages of using Angular, RXJS, and Typescript.</li>
+                  <li>Build a RESTful web service using Node.js, Express.js, and MongoDB</li>
+                  <li>Implement user authentication with JWT tokens</li>
+                  <li>Support CRUD operations for movie data and user favorites</li>
+                  <li>Secure API endpoints with middleware and error handling</li>
+                  <li>Deploy the API to a cloud platform like Heroku or MongoDB Atlas</li>
             </li>
             </ul>
             </ul>
@@ -104,78 +103,77 @@
 
             <li>
                <h1>Technology Stack Decisions</h1>
-               <p>The Project Brief required the use of a MEAN stack (MongoDB, Express.js, Angular, Node.js) for the
-                  development of the MyFlix Angular application. The decision to use Angular as the front-end framework
-                  was based on its robust features, including component-based architecture, two-way data binding, and
-                  dependency injection. Angular's built-in routing and HTTP client modules also made it an ideal choice
-                  for managing application state and handling API requests.</p>
+               <p>The Project Brief required the use of specific technologies to build the MyFlix API. Here are the
+                  technology stack decisions I made for the project:</p>
+
+               </p>
                </p>
                <div class="case-study-card-tech-stack-container">
                   <img src="img/react-native-logo.png" class="case-study-card-tech-stack-container-image"
                      alt="React Native Logo">
                   <div class="tech-info">
-                     <h3>Angular</h3>
-                     <p>Angular is a powerful front-end framework that provides a comprehensive set of tools for
-                        building
-                        dynamic web applications. Its component-based architecture, two-way data binding, and dependency
-                        injection make it an ideal choice for creating interactive, responsive user interfaces.
-                        Angular's
-                        built-in routing and HTTP client modules simplify state management and API integration, enabling
-                        seamless communication between the front-end and back-end.</p>
-                  </div>
-                  <img src="img/react-native-logo.png" class="case-study-card-tech-stack-container-image"
-                     alt="React Native Logo">
-                  <div class="tech-info">
-                     <h3>Material Design</h3>
-                     <p>Material Design is a design language developed by Google that emphasizes clean, intuitive
-                        interfaces and consistent user experiences. By incorporating Material Design principles into
-                        the
-                        MyFlix Angular application, I was able to create a visually appealing, user-friendly
-                        interface
-                        that adheres to best practices for usability and accessibility.</p>
-                     </p>
-                  </div>
-                  <div class="tech-info">
-                     <h3>MongoDB, Mongoose, and Express.js</h3>
-                     <p>Like the React version of this app, the Angular version uses MongoDB as the database,
-                        Mongoose as
-                        the ODM, and Express.js as the server framework. These technologies provide a robust,
-                        scalable
-                        backend architecture that supports efficient data storage, retrieval, and manipulation. By
-                        leveraging MongoDB's flexible document-based data model, Mongoose's schema validation, and
-                        Express.js's middleware capabilities, I was able to create a secure, reliable API for
-                        managing
-                        movie data and user authentication.</p>
-                  </div>
-                  <img src="img/react-native-logo.png" class="case-study-card-tech-stack-container-image"
-                     alt="React Native Logo">
-                  <div class="tech-info">
-                     </p>
-                     <h3>Typescript</h3>
-                     <p>Typescript is a superset of JavaScript that adds static typing and other advanced features to
-                        improve code quality and maintainability. By using Typescript in the MyFlix Angular project,
-                        I was
-                        able to catch errors early, enhance code readability, and leverage advanced language features
-                        like
-                        interfaces, generics, and decorators. Typescript's strict type checking and compile-time
-                        error
-                        detection helped me write more robust, maintainable code and avoid common pitfalls in Angular
-                        development.</p>
+                     <h3>MongoDB</h3>
+                     <p>MongoDB is a NoSQL database that stores data in flexible, JSON-like documents. By using MongoDB
+                        as the database for the MyFlix API, I was able to store movie data, user information, and
+                        favorites in a scalable, efficient manner. MongoDB's document-based data model allowed me to
+                        store complex data structures, perform fast queries, and scale horizontally as needed. By
+                        leveraging MongoDB's aggregation framework, indexing, and sharding capabilities, I was able to
+                        create a robust, high-performance database for managing movie data and user authentication.
                      </p>
                   </div>
                   <img src="img/react-native-logo.png" class="case-study-card-tech-stack-container-image"
                      alt="React Native Logo">
                   <div class="tech-info">
-                     <h3>RXJS</h3>
-                     <p>RXJS is a powerful library that is a part of Typescript and Angular. It is used to handle
-                        asynchronous operations and events in a reactive, functional programming style. By using RXJS
-                        in
-                        the MyFlix Angular project, I was able to manage complex data flows, handle asynchronous
-                        operations, and create responsive, interactive user interfaces. RXJS's observables,
-                        operators, and
-                        subjects provided a flexible, composable way to work with asynchronous data streams, enabling
-                        me to
-                        build efficient, scalable applications that respond to user input in real time.</p>
+                     <h3>Mongoose</h3>
+                     <p>Mongoose is an Object Data Modeling (ODM) library for MongoDB that provides a schema-based
+                        solution to model application data. By using Mongoose in the MyFlix API project, I was able to
+                        define data schemas, validate data, and interact with MongoDB in a more structured, efficient
+                        way. Mongoose's schema validation, middleware hooks, and query building capabilities helped me
+                        create a secure, reliable API that enforces data integrity, handles complex data operations, and
+                        integrates with Express.js seamlessly.
+                     </p>
+                  </div>
+                  <div class="tech-info">
+                     <h3>Node.js, Express.js</h3>
+                     <p>Node.js and Express.js are a powerful combination for building fast, scalable web applications.
+                        By using Node.js as the runtime environment and Express.js as the web application framework, I
+                        was able to create a RESTful API that handles HTTP requests, routes, and middleware efficiently.
+                        Node.js's event-driven, non-blocking I/O model and Express.js's minimalist, flexible design
+                        enabled me to build a lightweight, high-performance API that serves movie data, user
+                        authentication, and favorites. By leveraging Node.js's ecosystem of modules and Express.js's
+                        middleware, routing, and error handling, I was able to create a secure, efficient API that
+                        interacts with MongoDB and supports CRUD operations for movie data and user favorites.
+                     </p>
+                  </div>
+                  <img src="img/react-native-logo.png" class="case-study-card-tech-stack-container-image"
+                     alt="React Native Logo">
+                  <div class="tech-info">
+                     </p>
+                     <h3>REST Architecture</h3>
+                     <p>REST (Representational State Transfer) is an architectural style for designing networked
+                        applications that use HTTP methods to perform CRUD operations on resources. By following REST
+                        principles in the MyFlix API project, I was able to create a scalable, stateless web service that
+                        exposes movie data, user information, and favorites as resources. RESTful endpoints were designed
+                        to support CRUD operations for movie data and user favorites, enabling clients to interact with
+                        the API using standard HTTP methods like GET, POST, PUT, and DELETE. By following RESTful
+                        conventions for resource naming, URL structure, and response formats, I was able to create a
+                        predictable, easy-to-use API that conforms to industry best practices and standards.
+                     </p>
+                     </p>
+                  </div>
+                  <img src="img/react-native-logo.png" class="case-study-card-tech-stack-container-image"
+                     alt="React Native Logo">
+                  <div class="tech-info">
+                     <h3>Passport</h3>
+                     <p>Passport is an authentication middleware for Node.js that provides a simple, flexible way to
+                        authenticate users. By using Passport in the MyFlix API project, I was able to implement user
+                        authentication with JWT tokens, enabling users to register, log in, and manage their favorites.
+                        Passport's strategy-based authentication, session management, and error handling capabilities
+                        helped me create a secure, reliable API that authenticates users, protects routes, and manages
+                        user sessions. By leveraging Passport's local strategy, JWT strategy, and middleware functions, I
+                        was able to create a scalable, efficient API that enforces user authentication, handles user
+                        sessions, and integrates with Express.js seamlessly.
+                     </p>
                      </p>
                   </div>
                   <img src="img/react-native-logo.png" class="case-study-card-tech-stack-container-image"
@@ -187,10 +185,16 @@
          <ol class="case-study-card">
             <li>
                <h1>Conclusion</h1>
-               <p>Developing the MyFLix Angular App was a challenging yet rewarding experience that allowed me to
-                  demonstrate my proficiency in Angular development, user authentication, and data management. By
-                  following the project brief and implementing specific requirements, I was able to create a responsive,
-                  interactive web application that showcases my skills in front-end and back-end development.</p>
+               <p>Developing the MyFlix API project was a rewarding experience that allowed me to demonstrate my
+                  proficiency in back-end development, user authentication, and data management. By building a RESTful
+                  web service that provides movie data to the MyFlix Angular application, I was able to showcase my
+                  skills in Node.js, Express.js, and MongoDB. The API supports user authentication, enabling users to
+                  register, log in, and manage their favorites list. By interacting with the MyFlix API, the MyFlix
+                  Angular application can display a list of movies, allow users to view movie details, and manage their
+                  favorites. The API is secure, scalable, and efficient, supporting CRUD operations for movie data and
+                  user authentication. By deploying the API to a cloud platform like Heroku or MongoDB Atlas, I was able
+                  to create a production-ready web service that provides movie data to the MyFlix Angular application.
+               </p>
 
                <button type="button" class="nav_button" onclick="window.location.href='work.html';">Back to My
                   Projects</button>

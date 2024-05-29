@@ -49,134 +49,136 @@
    <main>
 
       <div class="case-study">
-         <h1>myFlix Angular Project</h1>
+         <h1>MeetApp Project</h1>
          <ol class="case-study-card">
             <li class="case-study-card-image-left">
                <img src="img/ChatApp.png" class="case-study-image" alt="ChatApp screenshot">
                <div>
                   <h2>Overview</h2>
                   <p>
-                     MyFlix Angular is a single-page web application that allows users to browse movies, view details,
-                     and manage their favorite movies. The application was developed as part of the CareerFoundry
-                     Full-Stack
-                     Web Development course, demonstrating proficiency in building Angular applications with a Node.js
-                     development backend. The project brief included specific requirements for the UI, user
-                     authentication, and data management, which were implemented using Angular components, services,
-                     and routing.
+                     MeetApp is a The MeetApp is a Progressive Web App that allows users to search for a city and view a
+                     list of events happening there. Built with React using a test-driven development (TDD) technique.
+                     The application uses the Google Calendar API to fetch upcoming events.
                   </p>
                </div>
             </li>
             <li class="case-study-card-image-right">
                <div>
-                  <h2>Purpose & Context</h2>
-                  <p>Movie streaming platforms have become increasingly popular, offering users a vast library of films
-                     and TV shows to enjoy. MyFlix Angular was designed to provide a encyclopedic, user-friendly
-                     interface for
-                     browsing movies, viewing details, and managing favorites. The application serves as a showcase of
-                     Angular development skills, demonstrating the ability to create responsive, interactive web
-                     applications with dynamic content and user authentication.</p>
+                  <h2>Purpose and Context</h2>
+                  <p>
+                     The MeetApp project was developed as part of the CareerFoundry Full-Stack Web Development course.
+                     The goal of the project was to build a Progressive Web App (PWA) that allows users to search for
+                     events in a specific city and view a list of upcoming events. The application needed to be
+                     responsive, interactive, and accessible, with a focus on user experience and performance. The
+                     project brief specified the use of React, TDD, and the Google Calendar API, as well as the
+                     implementation of a service worker for offline functionality.
+                  </p>
                </div>
                <img src="img/Popular-chat-screens.png" class="case-study-image" alt="Popuare Chat Screens Example">
             </li>
             <li>
                <h2>Objective</h2>
-               <p>The goal of the MyFlix Angular project was to build a responsive, interactive web application that
-                  allows users to:</p>
+               <p>
+                  The application needed to support the following features:
+               </p>
                <ul>
-                  <li class="case-study-card_list"><strong>Browse Movies</strong>: View a list of movies with
-                     corresponding images and descriptions.</li>
-                  <li class="case-study-card_list"><strong>View Movie Details</strong>: Access detailed information
-                     about each movie, including the director, genre, and release date.</li>
-                  <li class="case-study-card_list"><strong>Manage Favorites</strong>: Add and remove movies from a
-                     personal favorites list.</li>
-                  <li class="case-study-card_list"><strong>Search Movies</strong>: Search for movies by title or genre
-                     using a search bar.</li>
-                  <li class="case-study-card_list"><strong>Authenticate Users</strong>: Allow users to register, log in,
-                     and log out to access personalized features.</li>
-                  <li class="case-study-card_list"><strong>Angular, RXJS, and Typescript</strong>: Specifically
-                     demonstrate the
-                     advantages of using Angular, RXJS, and Typescript.</li>
+                  <li class="case-study-card_list"><strong>Search</strong>: Allow users to search for events in a
+                     specific city by entering the city name.</li>
+                  <li class="case-study-card_list"><strong>Filter</strong>: Enable users to filter events by date,
+                     category, and number of results.</li>
+                  <li class="case-study-card_list"><strong>View</strong>: Display a list of events matching the search
+                     criteria, including event name, date, time, location, and description.</li>
+                  <li class="case-study-card_list"><strong>Details</strong>: Provide detailed information about each
+                     event, including a link to the event page and a map showing the event location.</li>
+                  <li class="case-study-card_list"><strong>Service Worker</strong>: Implement a service worker to cache
+                     assets and enable offline functionality.</li>
+                  <li class="case-study-card_list"><strong>Test-Driven Development</strong>: Use a TDD approach to
+                     develop the application, writing tests before implementing features.</li>
+                  <li class="case-study-card_list"><strong>Google Calendar API</strong>: Integrate the Google Calendar
+                     API to fetch upcoming events based on the user's search criteria.</li>
+               </ul>
+
+
+
             </li>
-            </ul>
             </ul>
             </li>
             <br>
 
             <li>
                <h1>Technology Stack Decisions</h1>
-               <p>The Project Brief required the use of a MEAN stack (MongoDB, Express.js, Angular, Node.js) for the
-                  development of the MyFlix Angular application. The decision to use Angular as the front-end framework
-                  was based on its robust features, including component-based architecture, two-way data binding, and
-                  dependency injection. Angular's built-in routing and HTTP client modules also made it an ideal choice
-                  for managing application state and handling API requests.</p>
+               <p>The Project Brief required the use of React, TDD, and the Google Calendar API, as well as the
+                  implementation of a service worker for offline functionality. Based on these requirements, I chose
+                  the following technologies for the MeetApp project:
                </p>
                <div class="case-study-card-tech-stack-container">
                   <img src="img/react-native-logo.png" class="case-study-card-tech-stack-container-image"
                      alt="React Native Logo">
                   <div class="tech-info">
-                     <h3>Angular</h3>
-                     <p>Angular is a powerful front-end framework that provides a comprehensive set of tools for
-                        building
-                        dynamic web applications. Its component-based architecture, two-way data binding, and dependency
-                        injection make it an ideal choice for creating interactive, responsive user interfaces.
-                        Angular's
-                        built-in routing and HTTP client modules simplify state management and API integration, enabling
-                        seamless communication between the front-end and back-end.</p>
+                     <h3>React</h3>
+                     <p>React is a popular front-end library for building user interfaces. Its component-based
+                        architecture, virtual DOM, and one-way data flow make it an ideal choice for creating
+                        interactive, responsive web applications. React's declarative syntax, reusable components, and
+                        unidirectional data flow simplify the development process and improve code maintainability.
+                        By
+                        using React in the MeetApp project, I was able to create a fast, efficient web application
+                        that
+                        provides a seamless user experience across different devices and screen sizes.</p>
                   </div>
                   <img src="img/react-native-logo.png" class="case-study-card-tech-stack-container-image"
                      alt="React Native Logo">
                   <div class="tech-info">
-                     <h3>Material Design</h3>
-                     <p>Material Design is a design language developed by Google that emphasizes clean, intuitive
-                        interfaces and consistent user experiences. By incorporating Material Design principles into
-                        the
-                        MyFlix Angular application, I was able to create a visually appealing, user-friendly
-                        interface
-                        that adheres to best practices for usability and accessibility.</p>
-                     </p>
+                     <h3>Test-Driven Development (TDD)</h3>
+                     <p>Test-Driven Development (TDD) is a software development technique that involves writing tests
+                        before implementing features. By following a TDD approach, I was able to write tests that
+                        defined
+                        the expected behavior of the application and then write code to make the tests pass. This
+                        iterative process helped me catch bugs early, improve code quality, and ensure that the
+                        application met the project requirements. TDD also encouraged me to write modular, testable
+                        code
+                        that was easy to maintain and extend, resulting in a more robust, reliable application.</p>
                   </div>
                   <div class="tech-info">
-                     <h3>MongoDB, Mongoose, and Express.js</h3>
-                     <p>Like the React version of this app, the Angular version uses MongoDB as the database,
-                        Mongoose as
-                        the ODM, and Express.js as the server framework. These technologies provide a robust,
-                        scalable
-                        backend architecture that supports efficient data storage, retrieval, and manipulation. By
-                        leveraging MongoDB's flexible document-based data model, Mongoose's schema validation, and
-                        Express.js's middleware capabilities, I was able to create a secure, reliable API for
-                        managing
-                        movie data and user authentication.</p>
-                  </div>
-                  <img src="img/react-native-logo.png" class="case-study-card-tech-stack-container-image"
-                     alt="React Native Logo">
-                  <div class="tech-info">
-                     </p>
-                     <h3>Typescript</h3>
-                     <p>Typescript is a superset of JavaScript that adds static typing and other advanced features to
-                        improve code quality and maintainability. By using Typescript in the MyFlix Angular project,
-                        I was
-                        able to catch errors early, enhance code readability, and leverage advanced language features
-                        like
-                        interfaces, generics, and decorators. Typescript's strict type checking and compile-time
-                        error
-                        detection helped me write more robust, maintainable code and avoid common pitfalls in Angular
-                        development.</p>
-                     </p>
+                     <h3>Google Calendar API</h3>
+                     <p>The Google Calendar API is a powerful tool for accessing and managing calendar data. By
+                        integrating the Google Calendar API into the MeetApp project, I was able to fetch upcoming
+                        events
+                        based on the user's search criteria and display them in the application. The API provided
+                        access
+                        to event details such as name, date, time, location, and description, as well as links to the
+                        event page and a map showing the event location. By leveraging the Google Calendar API, I was
+                        able
+                        to provide users with up-to-date information about events happening in their city and create
+                        a
+                        dynamic, engaging user experience.</p>
                   </div>
                   <img src="img/react-native-logo.png" class="case-study-card-tech-stack-container-image"
                      alt="React Native Logo">
                   <div class="tech-info">
-                     <h3>RXJS</h3>
-                     <p>RXJS is a powerful library that is a part of Typescript and Angular. It is used to handle
-                        asynchronous operations and events in a reactive, functional programming style. By using RXJS
-                        in
-                        the MyFlix Angular project, I was able to manage complex data flows, handle asynchronous
-                        operations, and create responsive, interactive user interfaces. RXJS's observables,
-                        operators, and
-                        subjects provided a flexible, composable way to work with asynchronous data streams, enabling
-                        me to
-                        build efficient, scalable applications that respond to user input in real time.</p>
-                     </p>
+                     <h3>Lighthouse</h3>
+                     <p>Lighthouse is an open-source tool for auditing and improving the performance, accessibility,
+                        best practices, and SEO of web applications. By using Lighthouse in the MeetApp project, I was
+                        able to identify and fix performance issues, accessibility barriers, and SEO problems that
+                        could
+                        impact the user experience. Lighthouse's comprehensive reports and actionable recommendations
+                        helped me optimize the application for speed, usability, and search engine visibility, ensuring
+                        that it met the highest standards of quality and performance.</p>
+                  </div>
+                  <img src="img/react-native-logo.png" class="case-study-card-tech-stack-container-image"
+                     alt="React Native Logo">
+                  <div class="tech-info">
+                     <h3>AWS Lambda</h3>
+                     <p>AWS Lambda is a serverless computing service that allows you to run code without provisioning
+                        or managing servers. By using AWS Lambda in the MeetApp project, I was able to execute
+                        server-side
+                        logic in response to events triggered by the application. Lambda functions provided a
+                        scalable,
+                        cost-effective way to handle tasks such as fetching data from the Google Calendar API,
+                        processing
+                        user input, and sending notifications to users. By leveraging AWS Lambda, I was able to build
+                        a
+                        flexible, efficient back-end architecture that supported the application's functionality and
+                        performance requirements.</p>
                   </div>
                   <img src="img/react-native-logo.png" class="case-study-card-tech-stack-container-image"
                      alt="React Native Logo">
@@ -187,11 +189,15 @@
          <ol class="case-study-card">
             <li>
                <h1>Conclusion</h1>
-               <p>Developing the MyFLix Angular App was a challenging yet rewarding experience that allowed me to
-                  demonstrate my proficiency in Angular development, user authentication, and data management. By
-                  following the project brief and implementing specific requirements, I was able to create a responsive,
-                  interactive web application that showcases my skills in front-end and back-end development.</p>
-
+               <p>Developing the MeetApp project was a challenging and rewarding experience that allowed me to
+                  demonstrate my skills in front-end development, test-driven development, and API integration. By
+                  using React, TDD, and the Google Calendar API, I was able to build a Progressive Web App that
+                  provides users with up-to-date information about events happening in their city. The application
+                  features a responsive, interactive design, fast performance, and offline functionality, making it
+                  easy to use and accessible on a variety of devices. The project also gave me the opportunity to
+                  practice writing clean, modular code, creating reusable components, and following best practices
+                  for web development. Overall, the MeetApp project was a valuable learning experience that
+                  strengthened my front-end development skills and prepared me for future projects in the field.</p>
                <button type="button" class="nav_button" onclick="window.location.href='work.html';">Back to My
                   Projects</button>
                <button type="button" class="nav_button" onclick="window.location.href='index.html';">Back to
