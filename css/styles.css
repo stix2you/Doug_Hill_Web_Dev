@@ -540,7 +540,7 @@ body {
 /* PROJECT LIST STYLING */
 .work {
    text-align: center;
-   max-width: 1200px;
+   max-width: 1450px;
    margin: 0 auto;
    padding-top: 120px;
    /* Ensure content starts below the navbar */
@@ -548,20 +548,20 @@ body {
 
 .project-list {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(450px, 450px));
    grid-gap: 20px;
    /* Space between cards */
    padding: 20px;
    /* Padding around the entire grid */
    margin: 0 auto;
    /* Centers the grid in the section */
-   max-width: 1200px;
+   max-width: 1500px;
    /* Maximum width of the grid */
 }
 
 .project-list__item {
    display: grid;
-   grid-template-rows: 80px 200px auto 200px;
+   grid-template-rows: 80px auto auto 200px;
    background-color: var(--color-palette-1A);
    border: 1px solid var(--border-color-1);
    padding: 15px;
@@ -1134,23 +1134,7 @@ body {
 
 
 /* Styles for medium screens: between 501px and 750px */
-@media (min-width: 801px) and (max-width: 1200px) {
-   .project-list {
-      grid-template-columns: 1fr 1fr;
-      /* 2 columns layout */
-   }
 
-   .project-list__item {
-      grid-column: auto;
-      /* Ensures items span 1 column */
-   }
-
-   .project-link,
-   .project-link:visited {
-      font-size: 16px;
-      /* Standard text size for moderate screens */
-   }
-}
 
 /* Adjustments for moderate small screens: up to 750px */
 @media (max-width: 750px) {
