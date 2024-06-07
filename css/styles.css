@@ -476,11 +476,11 @@ body {
 .about-container {
    display: flex;
    justify-content: space-between;
+   padding: 20px;
    padding-top: 120px;
    /* Ensure content starts below the navbar */
    max-width: 1200px;
    margin: 0 auto;
-   padding: 20px;
 }
 
 .about-left {
