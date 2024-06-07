@@ -473,32 +473,22 @@ body {
 
 
 /* ABOUT PAGE STYLING */
-.about-container {
-   display: flex;
-   justify-content: space-between;
-   padding-top: 120px;
-   /* Ensure content starts below the navbar */
-   max-width: 1200px;
+.about {
+   text-align: center;
+   max-width: 700px;
    margin: 0 auto;
-   padding: 20px;
-}
-
-.about-left {
-   flex: 2;
-   padding-right: 20px;
-   border-right: 1px solid var(--border-color-1);
-}
-
-.about-right {
-   flex: 1;
-   padding-left: 20px;
+   padding-top: 120px;
+   /* Ensure content starts below the navbar !!! */
 }
 
 /* Styling the ordered list grid container */
 .tech-stack {
-   list-style-type: none;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+   grid-gap: 20px;
    padding: 0;
-   margin: 0;
+   list-style-type: none;
+   margin: 0 20px;
 }
 
 /* Styling each list item in the ordered list */
@@ -511,7 +501,6 @@ body {
    font-size: var(--font-size-medium);
    font-weight: var(--font-weight-light);
    color: var(--color-palette-1C);
-   margin-bottom: 20px;
 }
 
 /* Styling nested unordered lists */
@@ -536,31 +525,11 @@ body {
    padding-right: 5px;
 }
 
-/* Journey section cards styling */
-.journey-section {
+.cv_download_wide {
    display: flex;
-   flex-direction: column;
-   margin-bottom: 20px;
-}
-
-.journey-img {
-   max-width: 100%;
-   height: auto;
-   margin-bottom: 15px;
-   border-radius: 8px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.journey h3 {
-   background-color: var(--color-palette-1A);
-   border: 1px solid var(--border-color-1);
-   padding: 15px 20px;
-   border-radius: 8px;
-   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-   font-size: var(--font-size-medium);
-   font-weight: var(--font-weight-light);
-   color: var(--color-palette-1C);
+   justify-content: center;
    margin-top: 20px;
+   margin-bottom: 20px;
 }
 
 /* ABOUT PAGE STYLING */
@@ -945,9 +914,9 @@ body {
 .modal-content {
    margin: auto;
    display: block;
-   width: auto;
-   height: auto;
-}
+   width: auto; 
+   height: auto; 
+ }
 
 .close {
    position: absolute;
@@ -985,16 +954,13 @@ body {
 /* TOOLTIP ON IMAGE HOVER STYLING */
 /* Tooltip container setup */
 .tooltip {
-   position: relative;
-   /* Context for absolute positioning */
-   display: inline-block;
-   /* Align with other inline elements like images */
-}
-
-/* Tooltip text setup */
-.tooltip .tooltiptext {
-   visibility: hidden;
-   /* Initially hidden */
+   position: relative; /* Context for absolute positioning */
+   display: inline-block; /* Align with other inline elements like images */
+ }
+ 
+ /* Tooltip text setup */
+ .tooltip .tooltiptext {
+   visibility: hidden; /* Initially hidden */
    width: 120px;
    background-color: black;
    color: white;
@@ -1006,13 +972,12 @@ body {
    z-index: 1000;
    bottom: 50%;
    left: 50%;
-   margin-left: -60px;
-   /* Centers the tooltip */
+   margin-left: -60px; /* Centers the tooltip */
    opacity: 0;
    transition: opacity 0.3s;
-}
-
-.tooltip .tooltiptext::after {
+ }
+ 
+ .tooltip .tooltiptext::after {
    content: "";
    position: absolute;
    top: 100%;
@@ -1021,14 +986,13 @@ body {
    border-width: 5px;
    border-style: solid;
    border-color: black transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
+ }
+ 
+ .tooltip:hover .tooltiptext {
    visibility: visible;
    opacity: 1;
-}
-
-/* ^^^ TOOLTIP ON IMAGE HOVER STYLING ^^^ */
+ }
+ /* ^^^ TOOLTIP ON IMAGE HOVER STYLING ^^^ */
 
 
 
