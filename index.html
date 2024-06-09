@@ -23,33 +23,53 @@
       <!--LOGO UPPER LEFT-->
       <img onclick="window.location.href='index.html';" src="img/logo.jpg" class="logo_image"
          alt="Doug Hill Web Developer logo">
+
       <!--MENU BAR-->
       <nav class="page-header__item special">
          <ul role="menubar" class="navigation-list">
             <li role="presentation">
-               <a href="index.html" class="navigation-list__item navigation-list__item--active" role="menuitem">Home</a>
+               <a href="#home" class="navigation-list__item navigation-list__item--active" role="menuitem" data-target="home"
+                  aria-label="Home Page">Home</a>
             </li>
             <li role="presentation">
-               <a href="about.html" class="navigation-list__item" role="menuitem"
+               <a href="#about" class="navigation-list__item" role="menuitem" data-target="about"
                   aria-label="Information about me">About</a>
             </li>
             <li role="presentation">
-               <a href="work.html" class="navigation-list__item" role="menuitem">Work</a>
+               <a href="#work" class="navigation-list__item" role="menuitem" data-target="work"
+                  aria-label="List of projects I have completed">Work</a>
             </li>
             <li role="presentation">
-               <a href="contact.html" class="navigation-list__item" role="menuitem">Contact</a>
+               <a href="#contact" class="navigation-list__item" role="menuitem" data-target="contact"
+                  aria-label="How to contact me">Contact</a>
             </li>
          </ul>
       </nav>
       <!-- LIGHT/DARK THEME TOGGLE BUTTON -->
-      <div class="light_dark_label">Dark/Light</div>
+
+      <!-- LIGHT/DARK THEME TOGGLE BUTTON -->
       <div id="toggle" class="theme-toggle active" onclick="toggleTheme()">
+         <div class="icon moon-icon">
+            <!-- Inline SVG for moon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+               <path
+                  d="M12,17c-2.76,0-5-2.24-5-5s2.24-5,5-5,5,2.24,5,5-2.24,5-5,5Zm0-8c-1.65,0-3,1.35-3,3s1.35,3,3,3,3-1.35,3-3-1.35-3-3-3Zm1-5V1c0-.55-.45-1-1-1s-1,.45-1,1v3c0,.55,.45,1,1,1s1-.45,1-1Zm0,19v-3c0-.55-.45-1-1-1s-1,.45-1,1v3c0,.55,.45,1,1,1s1-.45,1-1ZM5,12c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1s.45,1,1,1h3c.55,0,1-.45,1-1Zm19,0c0-.55-.45-1-1-1h-3c-.55,0-1,.45-1,1s.45,1,1,1h3c.55,0,1-.45,1-1ZM6.71,6.71c.39-.39,.39-1.02,0-1.41l-2-2c-.39-.39-1.02-.39-1.41,0s-.39,1.02,0,1.41l2,2c.2,.2,.45,.29,.71,.29s.51-.1,.71-.29Zm14,14c.39-.39,.39-1.02,0-1.41l-2-2c-.39-.39-1.02-.39-1.41,0s-.39,1.02,0,1.41l2,2c.2,.2,.45,.29,.71,.29s.51-.1,.71-.29Zm-16,0l2-2c.39-.39,.39-1.02,0-1.41s-1.02-.39-1.41,0l-2,2c-.39,.39-.39,1.02,0,1.41,.2,.2,.45,.29,.71,.29s.51-.1,.71-.29ZM18.71,6.71l2-2c.39-.39,.39-1.02,0-1.41s-1.02-.39-1.41,0l-2,2c-.39,.39-.39,1.02,0,1.41,.2,.2,.45,.29,.71,.29s.51-.1,.71-.29Z" />
+            </svg>
+         </div>
          <i class="indicator"></i>
+         <div class="icon sun-icon">
+            <!-- Inline SVG for sun -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+               <path
+                  d="M15,24a12.021,12.021,0,0,1-8.914-3.966,11.9,11.9,0,0,1-3.02-9.309A12.122,12.122,0,0,1,13.085.152a13.061,13.061,0,0,1,5.031.205,2.5,2.5,0,0,1,1.108,4.226c-4.56,4.166-4.164,10.644.807,14.41a2.5,2.5,0,0,1-.7,4.32A13.894,13.894,0,0,1,15,24Zm.076-22a10.793,10.793,0,0,0-1.677.127,10.093,10.093,0,0,0-8.344,8.8A9.927,9.927,0,0,0,7.572,18.7,10.476,10.476,0,0,0,18.664,21.43a.5.5,0,0,0,.139-.857c-5.929-4.478-6.4-12.486-.948-17.449a.459.459,0,0,0,.128-.466.49.49,0,0,0-.356-.361A10.657,10.657,0,0,0,15.076,2Z" />
+            </svg>
+         </div>
       </div>
    </header>
 
+   <!-- HOMEPAGE SECTION -->
    <main class="profile">
-      <div class="main-container">
+      <section id="home" class="main-container">
          <div class="first-row">
             <img src="img/portrait.jpg" class="profile_portrait" alt="Doug Hill Portrait">
             <div class="text-content">
@@ -98,12 +118,407 @@
             <button type="button" class="nav_button" onclick="window.location.href='about.html';">About Me</button>
             <button type="button" class="nav_button" onclick="window.location.href='work.html';">My Projects</button>
             <button type="button" class="nav_button" onclick="window.location.href='contact.html';">Contact me</button>
-            <a href="files/Doug_Hill_Resume.pdf" target="_blank" >
+            <a href="files/Doug_Hill_Resume.pdf" target="_blank">
                <button type="button" class="nav_button">Resume</button>
             </a>
 
          </div>
-      </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="about-container">
+         <div class="about-left">
+            <h2>My Web Development Journey</h2>
+            <div class="journey">
+               <h3>Career Foundry</h3>
+               <div class="journey-section">
+                  <img src="img/CareerFoundryLogo.png" alt="Career Foundry Logo" class="journey-img">
+                  <p>After two rewarding careers in Auto Mechanics and Pro Audio Sales, I have decided to return to one
+                     of my first loves: computers. If I'm honest, that was where I spent most of the time when I was a
+                     kid. Having grown up in the 80's, learning Basic on an Apple //e, then C++ in the 90's on PC based
+                     machines, computers have always been a hobby, much like auto repair always was from the moment I
+                     could pick up a wrench.
+                     <br><br>
+                     I didn't come to the auto repair world without a solid foundation for mechanics, and it's a similar
+                     story with Web Development. When I was younger, I was always the one pulling apart the games and
+                     programs I was using, trying to figure out how they worked on a software side. I spent a great deal
+                     of time helping my friend with her LAN, which she installed in her house in the 90's in order to
+                     practice for her day job doing IT at an accounting firm. As a teenager, I spent many hours coding
+                     in Basic and trying to get programs to work, and hung around with like minded friends who were also
+                     into computers.
+                     <br><br>
+                     This is why I know my skills as an Auto Mechanic will translate well into Web Development. In
+                     Mechanics I was always drawn to the electrical and computer side of modern vehicles, and I began to
+                     specialize in advanced vehicle diagnostics, using oscilloscopes and other tools to trace signals in
+                     and out of the computers in the vehicles. I was always the one who was called upon to diagnose the
+                     most difficult problems, and I was always the one who was able to solve them. I guess it's no
+                     surprise that the computer side of vehicles spoke to me so strongly, as they are essentially
+                     several different computers linked together with three to five networks (Including an optical
+                     network in many cars now).
+                     <br><br>
+                     After some careful research on bootcamps, I came across Career Foundry. I have been impressed with
+                     how much they push their students to learn, and how much they expect from them. It speaks to my
+                     desire to push myself to learn as much as I can, and to be the best I can be.
+                     <br><br>
+                  </p>
+               </div>
+               <h3>Auto Mechanics</h3>
+               <div class="journey-section">
+                  <img src="img/automechanics.jpg" alt="Auto Mechanics Photo" class="journey-img">
+                  <p>For about the past 15 years I have been an active, full time auto mechanic. I trained at Madison
+                     College
+                     (Madison, Wisconsin) from 2007 to 2009, and dove in the deep end by embracing "A" level auto repair
+                     work and advanced diagnostics from the very beginning of my professional career.
+                     <br><br>
+                     The mechanical part of the work was not as challenging, and so as I progressed and grew within the
+                     field, I found myself drawn to the electrical and computer side of modern vehicles. I began to
+                     specialize in advanced electrical and computer diagnosics. At Foreign Car Specialists, we would
+                     receive vehicles which even the dealership had given up on, and tackled the computer module
+                     replacements, wiring harness repairs, vehicle network diagnostics, vehicle programming, and
+                     diagnostics which involved combining the mechanical world with the electrical world. When
+                     interfacing between the two, I often found myself with an oscilloscope in hand looking directly at
+                     signal going in and out of the computers in order to fault trace. Some of my favorite diagnostics
+                     involved the use of pressure transducers, to scope a pattern which showed exactly how an individual
+                     cylinder was moving air in and out of it.
+                     <br><br>
+                     As time went on, the workflow at the shop became problematic to track, and so I developed a
+                     tracking system and a parts inventory system using just spreadsheets and Quickbooks. But it was
+                     every bit as effective as costly management software. That project in itself showed me I could
+                     benefit from getting into API's and databases, to be able to design a more efficient system and one
+                     that could be customer tailored to a shop. The challenges of managing the business were attractive
+                     to me, beyond the challenges of fixing cars. And I enjoyed developing computer based solutions to
+                     manage the workflow, parts integration into the workflow, inventory control, and communications.
+                     <br><br>
+                     I continue to work on cars to make money on the side, and I still enjoy mechanics.
+                  </p>
+               </div>
+               <h3>Pro Audio and Music</h3>
+               <div class="journey-section">
+                  <img src="img/proaudio.jpg" alt="Pro Audio and Music" class="journey-img">
+                  <p>My first career began in the 90's, after receiving my Bachelor's degree in Music. During the day I
+                     worked selling Pro Audio Equipment Sales, working for a nationwide company called Full Compass
+                     Systems. Nights and weekends found me playing as a drummer and percussionist in several bands and
+                     recording projects. After college, I spent about 10 years completely immersed in this world before
+                     deciding to make a change to better support my family.
+                     <br><br>
+                     During this time however, again I found I gravitated to the computer side of the business. My last
+                     six months at Full Compass Systems found me managing web sales. Back in 2004, the web was still a
+                     new frontier for sales, and so we did little more than sell on eBay and Amazon. But it did give me
+                     insight into the potential of the web for sales, and I began to see the potential for the web to be
+                     a powerful tool for business. I also developed the workflow for web sales, and managed that along
+                     with customer communications.
+                  </p>
+               </div>
+               <h3>Captioning for the Hearing Impaired</h3>
+               <div class="journey-section">
+                  <img src="img/captelphone.jpg" alt="Captioning for the Hearing Impaired" class="journey-img">
+                  <p>In an effort to supplement my income, for about 10 years I worked for a company who produced a
+                     phone which provided real time captions to their clients, directly on the telephone. It was part
+                     time, and I was mostly a captionist, using programs like ViaVoice and Dragon to produce captions
+                     along with a keyboard and macros.
+                     <br><br>
+                     However, I was often pulled off the phones to assist in training and quality control. I was one of
+                     several people who helped to transition captionists from training to on-the-floor captioning, which
+                     took about a week of sit-behind monitoring and coaching. I also helped to monitor calls and provide
+                     feedback to captionists, in order to improve captions. Working closely with managers and the
+                     training team over the course of the 10 years I was there, I learned a great deal about managing
+                     and training people.
+                  </p>
+               </div>
+               <h3>Other hobbies and interests:</h3>
+               <div class="journey-section">
+                  <img src="img/homebuiltairplane.jpg" alt="My Airplane" class="journey-img">
+                  <p>Single engine airplane pilot since age 17
+                  </p>
+                  <p>Powered Paragliding pilot - PPG2 rated as of April of 2023
+                  </p>
+                  <p>Homebuilt airplane - constructed a kit airplane from 2003 to 2006 and flew it until 2010, pictured
+                     above at the Tri-County Regional airport in Lone Rock, Wisconsin.
+                  </p>
+                  <p>Parenting - I am the proud father of a son who has just graduated from UW Madison with a degree in
+                     Journalism.
+                  </p>
+                  <img src="img/ppg.jpg" alt="Powered Paragliding photo" class="journey-img">
+               </div>
+            </div>
+         </div>
+         <div class="about-right">
+            <h2>Web Development Skills</h2>
+            <ol class="tech-stack">
+               <li>Frontend (Client Side)
+                  <ul>
+                     <li>Languages: HTML, CSS, JavaScript, XML</li>
+                     <li>Frameworks/Libraries: React, React-Native, Redux, Angular, Vue.js, React Native</li>
+                     <li>Tools: Babel Transpiler, NPM</li>
+                     <li>CSS Frameworks/Preprocessors: Tailwind CSS, SASS, Bootstrap, React Bootstrap</li>
+                  </ul>
+               </li>
+               <li>Backend (Server Side)
+                  <ul>
+                     <li>Languages: Node.js, SQL</li>
+                     <li>Frameworks: Express.js, Django</li>
+                     <li>Database Management Systems: MySQL, PostgreSQL, MongoDB</li>
+                     <li>ORMs and ODMs: Mongoose (for MongoDB)</li>
+                  </ul>
+               </li>
+               <li>Authentication and Authorization
+                  <ul>
+                     <li>OAuth Providers: Google OAuth</li>
+                     <li>Authentication Middleware: Passport</li>
+                  </ul>
+               </li>
+               <li>APIs and Services
+                  <ul>
+                     <li>Constructed my own API</li>
+                     <li>External APIs: Google API</li>
+                  </ul>
+               </li>
+               <li>Mobile App Development
+                  <ul>
+                     <li>Frameworks/libraries: React-Native</li>
+                     <li>Dev environment: Expo</li>
+                  </ul>
+               </li>
+               <li>Development and DevOps Tools
+                  <ul>
+                     <li>Integrated Development Environments (IDEs): Visual Studio Code</li>
+                     <li>Continuous Integration/Continuous Deployment (CI/CD): Jest</li>
+                     <li>Code Versioning Tools: Git</li>
+                     <li>Monitoring and Performance Tools: Atatus</li>
+                     <li>API Management: Postman</li>
+                     <li>HTTP Request Logging: Morgan (for Node.js)</li>
+                  </ul>
+               </li>
+               <li>Infrastructure
+                  <ul>
+                     <li>Cloud Service Providers: Amazon Web Services (AWS)</li>
+                     <li>Web Hosting: Heroku Web Hosting, Github Pages, MongoDB Atlas</li>
+                  </ul>
+               </li>
+               <li>Development Team Tools
+                  <ul>
+                     <li>Ora and Trello, using Scrum and Kanban frameworks.</li>
+                  </ul>
+               </li>
+            </ol>
+            <a class="cv_download_wide" href="files/Doug_Hill_Resume.pdf">
+               <button type="button" class="nav_button">View/Download my Resume</button>
+            </a>
+         </div>
+      </section>
+
+      <!-- WORK SECTION -->
+      <section id="work" class="work">
+         <div class="project-list">
+
+            <!-- PROJECT LIST GRID, ALTERNATING TEXT BLOCKS AND IMAGES-->
+            <div class="project-list__item">
+               <h2>MyFlix Angular Client</h2>
+               <img src="img/myFlix-Angular-movie-card-1470-830.jpg" alt="Screenshot of the MyFlix Angular Client"
+                  class="project-image">
+               <p>MEAN/Angular/Material-Design
+                  <br><br>
+                  Movie fans want an encyclopedic resource they can access easily to learn about movies.
+                  <br><br>
+                  MyFlix-Angular is a single-page, responsive movie app built with Angular, with routing and several
+                  interface views. It allows users to register, log in, and view information about different movies,
+                  directors, and genres. They can also add and remove movies from their list of favorites!
+               </p>
+               <div class="project-button-container">
+                  <a href="myFlix-Angular-Details.html">
+                     <button type="button" class="nav_button project_link">Project Details</button>
+                  </a>
+                  <a href="https://stix2you.github.io/myFlix-Angular-client/welcome" target="_blank">
+                     <button type="button" class="nav_button project_link">Go to site</button>
+                  </a>
+                  <a href="https://github.com/stix2you/myFlix-Angular-client" target="_blank">
+                     <button type="button" class="nav_button project_link">See project on GitHub!</button>
+                  </a>
+               </div>
+            </div>
+
+            <div class="project-list__item">
+               <h2>MyFlix React Client</h2>
+               <img src="img/myFlixImage.jpg" alt="Screenshot of the MyFlix React Client" class="project-image">
+               <p>
+                  MERN/React/Bootstrap
+                  <br><br>
+                  The benefits of React over Angular include a smaller learning curve, and a more
+                  flexible and efficient way to build user interfaces.
+                  <br><br>
+                  Either way it's built, movie fans can enjoy a database with similar functionality built with either
+                  Angular or React.
+                  Designed to have the same functionality as the Angular MyFlix, this version was created using the very
+                  popular React library.
+               </p>
+               <div class="project-button-container">
+                  <a href="myFlix-React-Details.html">
+                     <button type="button" class="nav_button project_link">Project Details</button>
+                  </a>
+                  <a href="https://myflix-dhill-portfolio-site.netlify.app/" target="_blank">
+                     <button type="button" class="nav_button project_link">Go to site</button>
+                  </a>
+                  <a href="https://github.com/stix2you/myFlix-client" target="_blank">
+                     <button type="button" class="nav_button project_link">See project on GitHub!</button>
+                  </a>
+               </div>
+            </div>
+
+            <div class="project-list__item">
+               <h2>MyFlix API</h2>
+               <img src="img/Mongo-Atlas.jpg" alt="My Flix API Mongo Atlas Screenshot" class="project-image">
+               <p>
+                  MongoDB/REST/Passport/JWT
+                  <br><br>
+                  A modern database needs to be able to quickly and efficiently store and retrieve data. The database
+                  must
+                  be able to handle a large number of users and a large amount of data, and it must be easily
+                  maintainable.
+                  <br><br>
+                  The MyFlix API is a NoSQL Database with RESTful API interface, built with Node.js and Express.
+                  Heroku is used to host the database, and MongoDB is used to store the data.
+               </p>
+               <div class="project-button-container">
+                  <a href="myFlix-API-Details.html">
+                     <button type="button" class="nav_button project_link">Project Details</button>
+                  </a>
+                  <a href="https://github.com/stix2you/myFlix_api" target="_blank">
+                     <button type="button" class="nav_button project_link">See project on GitHub!</button>
+                  </a>
+               </div>
+            </div>
+
+            <div class="project-list__item">
+               <h2>Meet App</h2>
+               <img src="img/theMeetApp.jpg" alt="Screenshot of the Meet App" class="project-image">
+               <p>
+                  PWA/CI-CD/AWS/Google-OAuth and API
+                  <br><br>
+
+                  The intersection between the physical and digital worlds is a powerful place. After all, it's sort of
+                  what Web Dev is all about.
+                  The intersection between mobile apps and desktop apps is the Progressive Web App (PWA), leveraging the
+                  best of both worlds: the speed and ease of use of a mobile app, and the power and flexibility of a
+                  desktop app.
+                  <br><br>
+                  The MeetApp is a Progressive Web App that allows users to search for a city and view a list of events
+                  happening there.
+                  Built with React using a test-driven development (TDD) technique.
+                  The application uses the Google Calendar API to fetch upcoming events.
+                  <br><br><br><br><br><br>
+               </p>
+               <div class="project-button-container">
+                  <a href="MeetApp-Details.html">
+                     <button type="button" class="nav_button project_link">Project Details</button>
+                  </a>
+                  <a href="https://stix2you.github.io/meet/" target="_blank">
+                     <button type="button" class="nav_button project_link">Go to site</button>
+                  </a>
+                  <a href="https://github.com/stix2you/Meet-App" target="_blank">
+                     <button type="button" class="nav_button project_link">See project on GitHub!</button>
+                  </a>
+               </div>
+            </div>
+
+            <div class="project-list__item">
+               <h2>ChatApp</h2>
+               <img src="img/ChatApp.jpg" alt="Screenshot of the Chat App" class="project-image">
+               <p>
+                  React-Native/Expo/Firebase/Firestore
+                  <br><br>
+                  Mobile apps are undeniably a huge part of Web Development today.
+                  React Native makes it possible to build robust, feature-filled mobile apps with good old JavaScript.
+                  Expo provides a suite of tools to make the process even easier.
+                  <br><br>
+                  The ChatApp demonstrates some of the capability in an application that was built over the course of
+                  only
+                  a few days. It demonstrates a basic CHAT interface, and options to share images and their location.
+                  This project
+                  demonstrates some of the vast possibilites which exist when you have access to the mobile device
+                  suite of sensors and camera.
+                  <br><br>
+                  ChatApp features Asynchronous offline storage on the client side, and a real-time
+                  Firebase/Firestore database on the server side. The app is built using React Native, Expo, and Google
+                  Firestore.
+               </p>
+               <div class="project-button-container">
+                  <a href="chat_app_case_study.html">
+                     <button type="button" class="nav_button project_link">Case Study</button>
+                  </a>
+                  <a href="https://github.com/stix2you/ChatApp" target="_blank">
+                     <button type="button" class="nav_button project_link">See project on GitHub!</button>
+                  </a>
+               </div>
+            </div>
+
+            <div class="project-list__item">
+               <h2>Pokédex</h2>
+               <img src="img/Pokedex.jpg" alt="Screenshot of the Pokédex App" class="project-image">
+               <p>
+                  HTML/CSS/JavaScript
+                  <br><br>
+                  Sometimes the simplest solution is still the best.
+                  <br><br>
+                  Pokédex demonstrates this, providing a
+                  similar encyclopedic information about Pokémon as the more complex MyFlix apps. Although less robust
+                  in
+                  terms of user interaction and capability, it is less dependent on external libraries and frameworks,
+                  and
+                  is a good example of a simple, clean, and efficient application. It is built using HTML, CSS, and
+                  JavaScript, and draws data from the Pokémon API.
+               </p>
+               <br><br><br><br><br>
+               <div class="project-button-container">
+                  <a href="Pokedex-Details.html">
+                     <button type="button" class="nav_button project_link">Project Details</button>
+                  </a>
+                  <a href="https://stix2you.github.io/Pokedex/" target="_blank">
+                     <button type="button" class="nav_button project_link">Go to site</button>
+                  </a>
+                  <a href="https://github.com/stix2you/Pokedex" target="_blank">
+                     <button type="button" class="nav_button project_link">See project on GitHub!</button>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <!--CONTACT SECTION-->
+      <section id="contact" class="contact_container">
+         <h1>Contact Me!</h1>
+
+         <div>
+            Doug Hill<br>
+            Madison, WI 53711<br>
+            USA<br>
+            <br>
+            Phone: <a href="tel:+1 608 444 5575" aria-label="Phone Number">1+ 608 444 5575</a><br>
+            Email: <a href="mailto:stix2you@gmail.com">DouglasHillWebDev@gmail.com</a><br>
+            <br>
+            <br>
+         </div>
+
+         <!--FORM-->
+         <!--Note: HTML5 frontend validation attributes used here: placeholder, required, maxlength-->
+         <form id="submissionForm" action="https://getform.io/f/navvpnea" method="POST">
+            <label class="standard-label" for="contact-email">Email: </label>
+            <input type="email" name="email" placeholder="Your Email" id="contact-email" required>
+
+            <label class="standard-label" for="contact-phone">Telephone: </label>
+            <input type="tel" name="tel" placeholder="Your Phone Number" id="contact-phone" required
+               pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+            <!-- Checkbox for Non-US number, NOTE: id="non-us" is used in script file to toggle removal of "pattern" attribute -->
+            <div style="margin: 10px 0;">
+               <input type="checkbox" id="non-us" name="non-us">
+               <label for="non-us">Non-US Phone Number</label>
+            </div>
+            <label class="standard-label" for="contact-message">Message: </label>
+            <textarea name="message" placeholder="Your Message" id="contact-message" required cols="30"
+               rows="5"></textarea>
+            <button class="form-submit-button nav_button" type="submit">Submit!</button>
+         </form>
+      </section>
    </main>
 
    <footer class="page_footer">
@@ -119,10 +534,22 @@
       </div>
    </footer>
 
+   <!-- Modal HTML -->
+   <div id="thankYouModal">
+      <div>
+         <p>Thank you for your message! I will be in touch soon.</p>
+         <button class="nav_button" onclick="closeModal()">Close</button>
+      </div>
+   </div>
+
    <!--tota11y accessibility checker
         <script src="js/tota11y.min.js"></script> -->
    <script src="js/theme-toggle.js"></script>
    <script src="js/color-change.js"></script>
+   <script src="js/form-submission.js"></script>
+   <script src="js/modal.js"></script>
+   <script src="js/active-navbar-link.js"></script>
+
 </body>
 
 </html>

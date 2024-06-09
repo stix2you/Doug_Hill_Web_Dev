@@ -43,7 +43,7 @@ EXCEPT box shadows due to the complexity of the shadow property and the need for
    --color-palette-1E: #000;
    --border-color-1: #ccc;
    --background-color-1: #ffffff;
-   --background-color-2: #1B78C9;
+   --background-color-2: #ffffff;
    --bullet-color: #555;
 
    /* Button Colors: */
@@ -82,13 +82,18 @@ EXCEPT box shadows due to the complexity of the shadow property and the need for
    --color-palette-1E: #d5d5d5;
    --border-color-1: #cccccc;
    --background-color-1: #000000;
-   --background-color-2: #1B78C9;
+   --background-color-2: #000000;
+   /* old color: #1B78C9 */
 
    /* Button Colors: */
    --button-background: #7edaff;
    --button-text: rgb(0, 0, 0);
    --button-border-color: #000000;
    --button-hover-border-color: #7edaff;
+}
+
+html {
+   scroll-behavior: smooth;
 }
 
 * {
@@ -167,6 +172,14 @@ button:focus,
    border-color: var(--button-hover-border-color);
 }
 
+#home,
+#about,
+#work,
+#contact {
+   padding-top: 80px;
+   /* Adjust for fixed header height */
+}
+
 /* DEFAULT LINK/NAV STYLING */
 
 
@@ -177,10 +190,10 @@ button:focus,
 /* PAGE HEADER STYLING */
 .page-header {
    display: flex;
-   align-items: top;
-   justify-content: center;
+   align-items: center;
+   justify-content: space-around;
    width: 100%;
-   padding: 20px 50px;
+   padding: 0px 150px 0px 0px;
    background-color: var(--color-palette-1A);
    position: fixed;
    z-index: 1000;
@@ -236,13 +249,57 @@ button:focus,
    cursor: pointer;
 }
 
+.moon-icon {
+   position: absolute;
+   left: 60px;
+}
+
+.sun-icon {
+   position: relative;
+   right: 25px;
+}
+
+.theme-toggle {
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+}
+
+.icon {
+   width: 20px;
+   height: 20px;
+}
+
+.theme-toggle .moon-icon svg,
+.theme-toggle .sun-icon svg {
+   fill: currentColor;
+}
+
+.light .moon-icon svg {
+   color: black;
+}
+
+.light .sun-icon svg {
+   color: white;
+}
+
+.dark .moon-icon svg {
+   color: white;
+}
+
+.dark .sun-icon svg {
+   color: black;
+}
+
 #toggle {
    position: absolute;
-   top: 60px;
-   right: 80px;
+   top: 33px;
+   /* Adjust vertical position of toggle switch */
+   right: 50px;
+   /* Adjust horizontal position of toggle switch */
    display: block;
-   width: 60px;
-   height: 30px;
+   width: 50px;
+   height: 20px;
    border-radius: 160px;
    background: var(--toggle-background);
    transition: 0.5s;
@@ -263,8 +320,8 @@ button:focus,
    position: absolute;
    top: 0px;
    left: 0px;
-   width: 30px;
-   height: 30px;
+   width: 20px;
+   height: 20px;
    background: linear-gradient(to bottom,
          var(--toggle-background-linear-gradient-light),
          var(--toggle-background-linear-gradient-dark));
