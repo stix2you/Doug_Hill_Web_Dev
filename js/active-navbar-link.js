@@ -1,3 +1,4 @@
+// the following code is used to change the active link in the navbar based on the section that is currently in view
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".navigation-list__item");
     const sections = document.querySelectorAll("section[id]");
@@ -5,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function changeActiveLink() {
         let index = sections.length;
 
-        while (--index && window.scrollY + 50 < sections[index].offsetTop) {} // Adjust 50 to the header height if needed
+        while (--index && window.scrollY + 50 < sections[index].offsetTop) {} // Adjust number to the header height if needed
 
         navLinks.forEach((link) => link.classList.remove("navigation-list__item--active"));
         if (index >= 0) {
