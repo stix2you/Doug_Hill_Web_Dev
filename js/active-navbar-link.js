@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function changeActiveLink() {
         let index = sections.length;
 
-        while (--index && window.scrollY + 0 < sections[index].offsetTop) {} // Adjust number to the header height if needed
+        while (--index && window.scrollY + 100 < sections[index].offsetTop) {} // Adjust number to the header height if needed
 
         navLinks.forEach((link) => link.classList.remove("navigation-list__item--active"));
         if (index >= 0) {
