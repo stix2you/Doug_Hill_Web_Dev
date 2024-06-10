@@ -36,7 +36,6 @@ let currentIndex = 0;  // Initialize the index of the color variable
 
 function updateColor() {
    const randomColor = getRandomColor();   // call function to get a random color
-   console.log(randomColor);  // Log the random color to the console
    document.documentElement.style.setProperty(colorVariables[currentIndex], randomColor);  // Set the color to the root element
    currentIndex = (currentIndex + 1) % colorVariables.length;                             // Move to the next color variable in the root element
    setTimeout(updateColor, 30000);                                                     // Call the function again after 2 seconds   
