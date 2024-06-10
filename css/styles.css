@@ -206,31 +206,24 @@ button:focus,
    width: 100%;
 }
 
-.logo_image {
-   flex: 0 0 auto;
-   /* Keeps the logo from growing */
-   width: 30%;
-   max-width: 400px;
-   float: left;
-}
-
 .logo_text {
    font-family: 'Annie Use Your Telescope', cursive;
    font-size: 70px;
    font-weight: 700;
+   color: var(--color-palette-1D);  
    cursor: pointer;
-   display: inline-block; /* Changed to inline-block */
-   color: #333;  /* Adjust color as needed */
+   display: inline-block;
    padding-left: 30px;
-   white-space: nowrap; /* Prevent line break */
+   white-space: nowrap; 
 }
 
 .logo_text .small {
    font-family: 'Annie Use Your Telescope', cursive;
    font-size: 28px;
    font-weight: 700;
+   color: var(--color-palette-1D);
    vertical-align: center;
-   margin-left: 5px;  /* Adjust spacing as needed */
+   margin-left: 5px; 
 }
 
 .navigation-list {
@@ -261,14 +254,6 @@ button:focus,
 
 .page-header nav {
    position: relative;
-}
-
-.light_dark_label {
-   position: absolute;
-   top: 80px;
-   right: 60px;
-   padding: 10px;
-   cursor: pointer;
 }
 
 .moon-icon {
@@ -315,7 +300,7 @@ button:focus,
 
 #toggle {
    position: absolute;
-   top: 33px;
+   top: 42px;
    /* Adjust vertical position of toggle switch */
    right: 50px;
    /* Adjust horizontal position of toggle switch */
