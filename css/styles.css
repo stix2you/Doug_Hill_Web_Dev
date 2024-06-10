@@ -24,6 +24,7 @@ EXCEPT box shadows due to the complexity of the shadow property and the need for
    /* Font Styling: */
    --font-family-1: "Lato", sans-serif;
    --font-family-2: "Lato", sans-serif;
+   --font-family-3: "Annie Use Your Telescope", cursive;
 
    --font-size-very-large: 36px;
    --font-size-large: 30px;
@@ -42,9 +43,9 @@ EXCEPT box shadows due to the complexity of the shadow property and the need for
    --color-palette-1D: #201658;
    /* logo text, header text */
    --color-palette-1E: #000;
-   --color-palette-1F: #df9800;
+   --color-palette-1F: gold;
    /* action color - button backgrounds and nav links */
-   --color-palette-1G: #574a00;
+   --color-palette-1G: #000000;
    /* action color outline for definition if needed*/
    --color-palette-1H: #050a9c;
    /* outline color for logo if needed*/
@@ -87,7 +88,7 @@ EXCEPT box shadows due to the complexity of the shadow property and the need for
    --color-palette-1D: #d8d8d8;
    /* logo text, header text */
    --color-palette-1E: #c0c0c0;
-   --color-palette-1F: #c4a700;
+   --color-palette-1F: gold;
    /* action color - button backgrounds and nav links */
    --color-palette-1G: #dbd4aa;
    /* action color outline for definition if needed*/
@@ -217,61 +218,62 @@ button:focus,
 }
 
 .logo_text {
-   font-family: 'Annie Use Your Telescope', cursive;
+   font-family: var(--font-family-3);
    font-size: 70px;
    font-weight: 700;
    color: var(--color-palette-1C);
    text-shadow:
-        -0.5px -0.5px 0 var(--color-palette-1H),  
-         0.5px -0.5px 0 var(--color-palette-1H),
-        -0.5px  0.5px 0 var(--color-palette-1H),
-         0.5px  0.5px 0 var(--color-palette-1H);   
+      -0.5px -0.5px 0 var(--color-palette-1H),
+      0.5px -0.5px 0 var(--color-palette-1H),
+      -0.5px 0.5px 0 var(--color-palette-1H),
+      0.5px 0.5px 0 var(--color-palette-1H);
    cursor: pointer;
    display: inline-block;
    padding-left: 30px;
-   white-space: nowrap; 
+   white-space: nowrap;
 }
 
 .logo_text .small {
-   font-family: 'Annie Use Your Telescope', cursive;
+   font-family: var(--font-family-3);
    font-size: 28px;
    font-weight: 700;
    color: var(--color-palette-1C);
    text-shadow:
-        -0.5px -0.5px 0 var(--color-palette-1H),  
-         0.5px -0.5px 0 var(--color-palette-1H),
-        -0.5px  0.5px 0 var(--color-palette-1H),
-         0.5px  0.5px 0 var(--color-palette-1H); 
+      -0.5px -0.5px 0 var(--color-palette-1H),
+      0.5px -0.5px 0 var(--color-palette-1H),
+      -0.5px 0.5px 0 var(--color-palette-1H),
+      0.5px 0.5px 0 var(--color-palette-1H);
    vertical-align: center;
-   margin-left: 5px; 
+   margin-left: 5px;
 }
 
 .navigation-list {
    display: flex;
    justify-content: flex-end;
    margin: 0;
-   padding: 0;
+   padding: 30px 0px 0px 0px;
    list-style: none;
 }
 
 .navigation-list__item {
    padding: 0 15px;
-   color: var(--color-palette-1C);
+   color: var(--color-palette-1F);
    text-shadow:
-        -0.5px -0.5px 0 var(--color-palette-1G),  
-         0.5px -0.5px 0 var(--color-palette-1G),
-        -0.5px  0.5px 0 var(--color-palette-1G),
-         0.5px  0.5px 0 var(--color-palette-1G); 
-   font-family: var(--font-family-2);
-   font-size: var(--font-size-medium);
-   font-style: normal;
+      -0.5px -0.5px 0 var(--color-palette-1G),
+      0.5px -0.5px 0 var(--color-palette-1G),
+      -0.5px 0.5px 0 var(--color-palette-1G),
+      0.5px 0.5px 0 var(--color-palette-1G);
+   /* font-family: var(--font-family-2); */
+   font-family: var(--font-family-3);
+   font-size: var(--font-size-medium-large);
+   letter-spacing: 2px;
    font-weight: var(--font-weight-normal);
 }
 
 .navigation-list__item--active {
-   color: var(--color-palette-1B);
+   color: var(--color-palette-1F);
    font-weight: var(--font-weight-bold);
-   letter-spacing: 2px;
+   letter-spacing: 3px;
 }
 
 .page-header__item:last-child {
@@ -326,7 +328,7 @@ button:focus,
 
 #toggle {
    position: absolute;
-   top: 42px;
+   top: 58px;
    /* Adjust vertical position of toggle switch */
    right: 50px;
    /* Adjust horizontal position of toggle switch */
@@ -1143,7 +1145,7 @@ body {
 
    #toggle {
       position: absolute;
-      right: 30px;
+      right: 50px;
       top: 100px;
       width: 40px;
       height: 20px;
@@ -1164,21 +1166,13 @@ body {
 
 /* RESPONSIVE STYLING - GENERAL*/
 /* Styles for narrow screens: max-width 500px */
-@media (max-width: 450px) {
+@media (max-width: 500px) {
    .page-header {
       display: flex;
       flex-direction: column;
       align-items: center;
       /* Center everything in the column */
       padding: 10px;
-   }
-
-   .logo_image {
-      width: 100%;
-      height: auto;
-      background-color: var(--color-palette-1E);
-      margin-bottom: 20px;
-      /* Space between logo and navigation */
    }
 
    .special {
@@ -1283,18 +1277,17 @@ body {
       flex-direction: column;
       align-items: flex-start;
    }
-   
-   
+
+
    .navigation-list {
       display: flex;
-
+      padding: 0;
       align-items: flex-end;
       margin-left: 0;
    }
 
    .navigation-list__item {
       margin: 10px 0;
-      font-size: 18px;
       line-height: 1.5;
    }
 }
