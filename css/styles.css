@@ -38,27 +38,28 @@ EXCEPT box shadows due to the complexity of the shadow property and the need for
    /* Color Palettes: */
    --color-palette-1A: #fff;
    --color-palette-1B: #98ABEE;
-   --color-palette-1C: #1d24cA;
+   --color-palette-1C: #0d13bb;
    --color-palette-1D: #201658;
    --color-palette-1E: #000;
+   --color-palette-1F: #00b5fd;
+   /* action color - button backgrounds and nav links */
    --border-color-1: #ccc;
    --background-color-1: #ffffff;
    --background-color-2: #ffffff;
    --bullet-color: #555;
 
-   /* Button Colors: */
-   --button-background: #7edaff;
-   --button-text: #000;
+   /* Button Colors other than background which is an action color, see above: */
+   --button-text: #ffffff;
    --button-border-color: #000000;
-   --button-hover-border-color: #7edaff;
+   --button-hover-border-color: #000000;
 
    /* Animation Specific Colors: */
-   --animation-color-one: red;
-   --animation-color-two: orange;
-   --animation-color-three: yellow;
-   --animation-color-four: green;
-   --animation-color-five: blue;
-   --animation-color-six: purple;
+   --animation-color-one: rgb(100, 0, 0);
+   --animation-color-two: rgb(100, 65, 0);
+   --animation-color-three: rgb(100, 100, 0);
+   --animation-color-four: rgb(0, 100, 0);
+   --animation-color-five: rgb(0, 0, 100);
+   --animation-color-six: rgb(100, 0, 100);
 
    /* TOGGLE COLORS */
    --toggle-background: #222;
@@ -80,13 +81,14 @@ EXCEPT box shadows due to the complexity of the shadow property and the need for
    --color-palette-1C: #62a9ff;
    --color-palette-1D: #e6e9f5;
    --color-palette-1E: #d5d5d5;
+   --color-palette-1F: #7edaff;
+   /* action color - button backgrounds and nav links */
    --border-color-1: #cccccc;
    --background-color-1: #000000;
    --background-color-2: #000000;
    /* old color: #1B78C9 */
 
-   /* Button Colors: */
-   --button-background: #7edaff;
+   /* Button Colors other than background which is an action color, see above: */
    --button-text: rgb(0, 0, 0);
    --button-border-color: #000000;
    --button-hover-border-color: #7edaff;
@@ -131,16 +133,16 @@ body {
 
 /* DEFAULT LINK/NAV STYLING */
 a {
-   color: var(--color-palette-1D);
+   color: var(--color-palette-1F);
    text-decoration: none;
 }
 
 a:visited {
-   color: var(--color-palette-1D);
+   color: var(--color-palette-1F);
 }
 
 a:active {
-   color: var(--color-palette-1B);
+   color: var(--color-palette-1F);
    text-decoration: underline;
 }
 
@@ -151,7 +153,7 @@ button {
    justify-content: center;
    font-family: inherit;
    font-size: var(--font-size-medium);
-   background-color: var(--button-background);
+   background-color: var(--color-palette-1F);
    color: var(--button-text);
    text-decoration: none;
    border-width: 1px;
@@ -212,6 +214,25 @@ button:focus,
    float: left;
 }
 
+.logo_text {
+   font-family: 'Annie Use Your Telescope', cursive;
+   font-size: 70px;
+   font-weight: 700;
+   cursor: pointer;
+   display: inline-block; /* Changed to inline-block */
+   color: #333;  /* Adjust color as needed */
+   padding-left: 30px;
+   white-space: nowrap; /* Prevent line break */
+}
+
+.logo_text .small {
+   font-family: 'Annie Use Your Telescope', cursive;
+   font-size: 28px;
+   font-weight: 700;
+   vertical-align: center;
+   margin-left: 5px;  /* Adjust spacing as needed */
+}
+
 .navigation-list {
    display: flex;
    justify-content: flex-end;
@@ -222,10 +243,11 @@ button:focus,
 
 .navigation-list__item {
    padding: 0 15px;
-   color: var(--color-palette-1E);
+   color: var(--color-palette-1C);
    font-family: var(--font-family-2);
    font-size: var(--font-size-medium);
    font-style: normal;
+   font-weight: var(--font-weight-bold);
 }
 
 .navigation-list__item--active {
@@ -519,7 +541,7 @@ body {
 }
 
 .skyline {
-   animation: 30s color-change infinite normal linear;
+   animation: 120s color-change infinite normal linear;
 }
 
 /* INDEX PAGE STYLING */
@@ -934,7 +956,7 @@ body {
    height: 3rem;
    margin: 0 -4px;
    text-align: center;
-   background-color: var(--button-background);
+   background-color: var(--color-palette-1F);
    color: var(--button-text);
    font-size: 1.25rem;
    font-weight: 700;
