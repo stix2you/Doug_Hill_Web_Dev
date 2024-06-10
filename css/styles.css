@@ -1114,6 +1114,27 @@ body {
       flex-direction: column;
    }
 
+   #toggle {
+      position: absolute;
+      right: 30px;
+      top: 100px;
+      width: 40px;
+      height: 20px;
+   }
+
+   #toggle .indicator {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 20px;
+      height: 20px;
+   }
+
+   #toggle.active .indicator {
+      left: 19px;
+   }
+
+
 }
 
 /* RESPONSIVE STYLING - GENERAL*/
@@ -1168,26 +1189,6 @@ body {
       position: absolute;
       right: 70px;
       top: 77px;
-   }
-
-   #toggle {
-      position: absolute;
-      right: 30px;
-      top: 90px;
-      width: 40px;
-      height: 20px;
-   }
-
-   #toggle .indicator {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 20px;
-      height: 20px;
-   }
-
-   #toggle.active .indicator {
-      left: 19px;
    }
 
    .third-row {
@@ -1253,6 +1254,12 @@ body {
 
 /* Adjustments for navigation layout at less than 900px */
 @media (max-width: 900px) {
+   .page-header {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   
+   
    .navigation-list {
       display: flex;
 
