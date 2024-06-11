@@ -572,76 +572,91 @@ body {
    max-width: 1200px;
    margin: 0 auto;
    text-align: center;
- }
- 
- .journey {
+}
+
+.journey {
    text-align: left;
- }
- 
- /* Journey section cards styling */
- .journey-card {
+}
+
+/* Journey section cards styling */
+.journey-card {
    background-color: var(--color-palette-1A);
    border: 1px solid var(--border-color-1);
    padding: 15px 20px;
    border-radius: 8px;
    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
    margin-top: 20px;
- }
- 
- /* Journey section content styling */
- .journey-section {
+}
+
+/* Journey section content styling */
+.journey-section {
    display: flex;
    flex-wrap: wrap;
    align-items: flex-start;
    margin-bottom: 20px;
- }
- 
- /* Left text with right image */
- .left-text p {
+}
+
+/* Left text with right image */
+.left-text p {
    order: 1;
- }
- 
- .left-text .journey-images {
+}
+
+.left-text .journey-images {
    order: 2;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
- }
- 
- /* Right text with left image */
- .right-text p {
+}
+
+/* Right text with left image */
+.right-text p {
    order: 2;
- }
- 
- .right-text .journey-images {
+}
+
+.right-text .journey-images {
    order: 1;
    display: flex;
    flex-direction: column;
    align-items: flex-end;
- }
- 
- .journey-img {
+}
+
+.journey-img {
    width: 300px;
    height: auto;
    margin-bottom: 15px;
    border-radius: 8px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
- }
- 
- .journey-section p {
+}
+
+.journey-section p {
    flex: 1 1 0;
    margin-right: auto;
    margin-bottom: 15px;
    padding: 15px;
- }
- 
- .journey h3 {
-   font-size: var(--font-size-medium);
+}
+
+.journey h3 {
+   font-size: var(--font-size-medium-large);
    font-weight: var(--font-weight-light);
    color: var(--color-palette-1C);
    margin-top: 0;
- }
- 
+   position: relative;
+   padding-bottom: 20px;
+}
+
+.journey h3::after {
+   content: "";
+   display: block;
+   width: calc(100% - 40px); /* 20px padding on each side */
+   height: 1px;
+   background-color: var(--border-color-1);
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+
 
 
 
